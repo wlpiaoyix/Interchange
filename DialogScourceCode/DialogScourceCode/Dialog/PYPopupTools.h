@@ -19,7 +19,7 @@ typedef void (^BlockPopupAnimation) (UIView * _Nonnull view, BlockPopupEndAnmati
 +(void) hiddenWithTargetView:(nonnull UIView*) targetView;
 //<==
 /**
- 半通明的遮挡的View
+ 半通明的遮挡的View-
  */
 +(nonnull UIView*) mantleViewWithTargetView:(nonnull UIView*) targetView;
 +(void) setMantleView:(nonnull UIView*) mantleView targetView:(nonnull UIView*) targetView;
