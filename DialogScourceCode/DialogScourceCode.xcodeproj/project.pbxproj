@@ -1,0 +1,720 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		150CE23C1BDA683F00935566 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 150CE23B1BDA683F00935566 /* main.m */; };
+		150CE23F1BDA683F00935566 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 150CE23E1BDA683F00935566 /* AppDelegate.m */; };
+		150CE2421BDA683F00935566 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 150CE2411BDA683F00935566 /* ViewController.m */; };
+		150CE2451BDA683F00935566 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 150CE2431BDA683F00935566 /* Main.storyboard */; };
+		150CE2471BDA683F00935566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 150CE2461BDA683F00935566 /* Assets.xcassets */; };
+		150CE24A1BDA683F00935566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 150CE2481BDA683F00935566 /* LaunchScreen.storyboard */; };
+		150CE2551BDA683F00935566 /* DialogScourceCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 150CE2541BDA683F00935566 /* DialogScourceCodeTests.m */; };
+		150CE2601BDA683F00935566 /* DialogScourceCodeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 150CE25F1BDA683F00935566 /* DialogScourceCodeUITests.m */; };
+		158DF14A1BEC7CF5007B1315 /* PYDailogTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 158DF1431BEC7CF5007B1315 /* PYDailogTools.m */; };
+		158DF14B1BEC7CF5007B1315 /* PYPopupTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 158DF1451BEC7CF5007B1315 /* PYPopupTools.m */; };
+		158DF14C1BEC7CF5007B1315 /* PYSheetTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 158DF1471BEC7CF5007B1315 /* PYSheetTools.m */; };
+		158DF14D1BEC7CF5007B1315 /* PYToastTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 158DF1491BEC7CF5007B1315 /* PYToastTools.m */; };
+		15A44B151BE85207007D6E4A /* Utile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A44B141BE85207007D6E4A /* Utile.framework */; };
+		15CB25431BEC5D10000D4FC5 /* Dialog.Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 15CB25421BEC5D10000D4FC5 /* Dialog.Framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15EE322A1C0586AE00A95341 /* PYDailogTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 158DF1421BEC7CF5007B1315 /* PYDailogTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15EE322B1C0586AE00A95341 /* PYPopupTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 158DF1441BEC7CF5007B1315 /* PYPopupTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15EE322C1C0586AE00A95341 /* PYToastTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 158DF1481BEC7CF5007B1315 /* PYToastTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15EE322D1C0586C200A95341 /* PYDailogTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 158DF1431BEC7CF5007B1315 /* PYDailogTools.m */; };
+		15EE322E1C0586C200A95341 /* PYPopupTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 158DF1451BEC7CF5007B1315 /* PYPopupTools.m */; };
+		15EE322F1C0586C200A95341 /* PYToastTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 158DF1491BEC7CF5007B1315 /* PYToastTools.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		150CE2511BDA683F00935566 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 150CE22F1BDA683F00935566 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 150CE2361BDA683F00935566;
+			remoteInfo = DialogScourceCode;
+		};
+		150CE25C1BDA683F00935566 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 150CE22F1BDA683F00935566 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 150CE2361BDA683F00935566;
+			remoteInfo = DialogScourceCode;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		150CE2371BDA683F00935566 /* DialogScourceCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DialogScourceCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		150CE23B1BDA683F00935566 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		150CE23D1BDA683F00935566 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		150CE23E1BDA683F00935566 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		150CE2401BDA683F00935566 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		150CE2411BDA683F00935566 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		150CE2441BDA683F00935566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		150CE2461BDA683F00935566 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		150CE2491BDA683F00935566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		150CE24B1BDA683F00935566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		150CE2501BDA683F00935566 /* DialogScourceCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DialogScourceCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		150CE2541BDA683F00935566 /* DialogScourceCodeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialogScourceCodeTests.m; sourceTree = "<group>"; };
+		150CE2561BDA683F00935566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		150CE25B1BDA683F00935566 /* DialogScourceCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DialogScourceCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		150CE25F1BDA683F00935566 /* DialogScourceCodeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialogScourceCodeUITests.m; sourceTree = "<group>"; };
+		150CE2611BDA683F00935566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		158DF1421BEC7CF5007B1315 /* PYDailogTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYDailogTools.h; sourceTree = "<group>"; };
+		158DF1431BEC7CF5007B1315 /* PYDailogTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYDailogTools.m; sourceTree = "<group>"; };
+		158DF1441BEC7CF5007B1315 /* PYPopupTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYPopupTools.h; sourceTree = "<group>"; };
+		158DF1451BEC7CF5007B1315 /* PYPopupTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYPopupTools.m; sourceTree = "<group>"; };
+		158DF1461BEC7CF5007B1315 /* PYSheetTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYSheetTools.h; sourceTree = "<group>"; };
+		158DF1471BEC7CF5007B1315 /* PYSheetTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYSheetTools.m; sourceTree = "<group>"; };
+		158DF1481BEC7CF5007B1315 /* PYToastTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYToastTools.h; sourceTree = "<group>"; };
+		158DF1491BEC7CF5007B1315 /* PYToastTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYToastTools.m; sourceTree = "<group>"; };
+		15A44B141BE85207007D6E4A /* Utile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Utile.framework; sourceTree = "<group>"; };
+		15CB25401BEC5D10000D4FC5 /* Dialog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dialog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		15CB25421BEC5D10000D4FC5 /* Dialog.Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dialog.Framework.h; sourceTree = "<group>"; };
+		15CB25441BEC5D10000D4FC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		150CE2341BDA683F00935566 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A44B151BE85207007D6E4A /* Utile.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		150CE24D1BDA683F00935566 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		150CE2581BDA683F00935566 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15CB253C1BEC5D10000D4FC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		150CE22E1BDA683F00935566 = {
+			isa = PBXGroup;
+			children = (
+				15A44B141BE85207007D6E4A /* Utile.framework */,
+				150CE2391BDA683F00935566 /* DialogScourceCode */,
+				150CE2531BDA683F00935566 /* DialogScourceCodeTests */,
+				150CE25E1BDA683F00935566 /* DialogScourceCodeUITests */,
+				15CB25411BEC5D10000D4FC5 /* Dialog.Framework */,
+				150CE2381BDA683F00935566 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		150CE2381BDA683F00935566 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				150CE2371BDA683F00935566 /* DialogScourceCode.app */,
+				150CE2501BDA683F00935566 /* DialogScourceCodeTests.xctest */,
+				150CE25B1BDA683F00935566 /* DialogScourceCodeUITests.xctest */,
+				15CB25401BEC5D10000D4FC5 /* Dialog.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		150CE2391BDA683F00935566 /* DialogScourceCode */ = {
+			isa = PBXGroup;
+			children = (
+				158DF1411BEC7CF5007B1315 /* Dialog */,
+				150CE23D1BDA683F00935566 /* AppDelegate.h */,
+				150CE23E1BDA683F00935566 /* AppDelegate.m */,
+				150CE2401BDA683F00935566 /* ViewController.h */,
+				150CE2411BDA683F00935566 /* ViewController.m */,
+				150CE2431BDA683F00935566 /* Main.storyboard */,
+				150CE2461BDA683F00935566 /* Assets.xcassets */,
+				150CE2481BDA683F00935566 /* LaunchScreen.storyboard */,
+				150CE24B1BDA683F00935566 /* Info.plist */,
+				150CE23A1BDA683F00935566 /* Supporting Files */,
+			);
+			path = DialogScourceCode;
+			sourceTree = "<group>";
+		};
+		150CE23A1BDA683F00935566 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				150CE23B1BDA683F00935566 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		150CE2531BDA683F00935566 /* DialogScourceCodeTests */ = {
+			isa = PBXGroup;
+			children = (
+				150CE2541BDA683F00935566 /* DialogScourceCodeTests.m */,
+				150CE2561BDA683F00935566 /* Info.plist */,
+			);
+			path = DialogScourceCodeTests;
+			sourceTree = "<group>";
+		};
+		150CE25E1BDA683F00935566 /* DialogScourceCodeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				150CE25F1BDA683F00935566 /* DialogScourceCodeUITests.m */,
+				150CE2611BDA683F00935566 /* Info.plist */,
+			);
+			path = DialogScourceCodeUITests;
+			sourceTree = "<group>";
+		};
+		158DF1411BEC7CF5007B1315 /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				158DF1421BEC7CF5007B1315 /* PYDailogTools.h */,
+				158DF1431BEC7CF5007B1315 /* PYDailogTools.m */,
+				158DF1441BEC7CF5007B1315 /* PYPopupTools.h */,
+				158DF1451BEC7CF5007B1315 /* PYPopupTools.m */,
+				158DF1461BEC7CF5007B1315 /* PYSheetTools.h */,
+				158DF1471BEC7CF5007B1315 /* PYSheetTools.m */,
+				158DF1481BEC7CF5007B1315 /* PYToastTools.h */,
+				158DF1491BEC7CF5007B1315 /* PYToastTools.m */,
+			);
+			path = Dialog;
+			sourceTree = "<group>";
+		};
+		15CB25411BEC5D10000D4FC5 /* Dialog.Framework */ = {
+			isa = PBXGroup;
+			children = (
+				15CB25421BEC5D10000D4FC5 /* Dialog.Framework.h */,
+				15CB25441BEC5D10000D4FC5 /* Info.plist */,
+			);
+			path = Dialog.Framework;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		15CB253D1BEC5D10000D4FC5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15CB25431BEC5D10000D4FC5 /* Dialog.Framework.h in Headers */,
+				15EE322A1C0586AE00A95341 /* PYDailogTools.h in Headers */,
+				15EE322B1C0586AE00A95341 /* PYPopupTools.h in Headers */,
+				15EE322C1C0586AE00A95341 /* PYToastTools.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		150CE2361BDA683F00935566 /* DialogScourceCode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 150CE2641BDA683F00935566 /* Build configuration list for PBXNativeTarget "DialogScourceCode" */;
+			buildPhases = (
+				150CE2331BDA683F00935566 /* Sources */,
+				150CE2341BDA683F00935566 /* Frameworks */,
+				150CE2351BDA683F00935566 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DialogScourceCode;
+			productName = DialogScourceCode;
+			productReference = 150CE2371BDA683F00935566 /* DialogScourceCode.app */;
+			productType = "com.apple.product-type.application";
+		};
+		150CE24F1BDA683F00935566 /* DialogScourceCodeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 150CE2671BDA683F00935566 /* Build configuration list for PBXNativeTarget "DialogScourceCodeTests" */;
+			buildPhases = (
+				150CE24C1BDA683F00935566 /* Sources */,
+				150CE24D1BDA683F00935566 /* Frameworks */,
+				150CE24E1BDA683F00935566 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				150CE2521BDA683F00935566 /* PBXTargetDependency */,
+			);
+			name = DialogScourceCodeTests;
+			productName = DialogScourceCodeTests;
+			productReference = 150CE2501BDA683F00935566 /* DialogScourceCodeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		150CE25A1BDA683F00935566 /* DialogScourceCodeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 150CE26A1BDA683F00935566 /* Build configuration list for PBXNativeTarget "DialogScourceCodeUITests" */;
+			buildPhases = (
+				150CE2571BDA683F00935566 /* Sources */,
+				150CE2581BDA683F00935566 /* Frameworks */,
+				150CE2591BDA683F00935566 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				150CE25D1BDA683F00935566 /* PBXTargetDependency */,
+			);
+			name = DialogScourceCodeUITests;
+			productName = DialogScourceCodeUITests;
+			productReference = 150CE25B1BDA683F00935566 /* DialogScourceCodeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		15CB253F1BEC5D10000D4FC5 /* Dialog.Framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15CB25491BEC5D10000D4FC5 /* Build configuration list for PBXNativeTarget "Dialog.Framework" */;
+			buildPhases = (
+				15CB253B1BEC5D10000D4FC5 /* Sources */,
+				15CB253C1BEC5D10000D4FC5 /* Frameworks */,
+				15CB253D1BEC5D10000D4FC5 /* Headers */,
+				15CB253E1BEC5D10000D4FC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dialog.Framework;
+			productName = Dialog.Framework;
+			productReference = 15CB25401BEC5D10000D4FC5 /* Dialog.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		150CE22F1BDA683F00935566 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = wlpiaoyi;
+				TargetAttributes = {
+					150CE2361BDA683F00935566 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					150CE24F1BDA683F00935566 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 150CE2361BDA683F00935566;
+					};
+					150CE25A1BDA683F00935566 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 150CE2361BDA683F00935566;
+					};
+					15CB253F1BEC5D10000D4FC5 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = 150CE2321BDA683F00935566 /* Build configuration list for PBXProject "DialogScourceCode" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 150CE22E1BDA683F00935566;
+			productRefGroup = 150CE2381BDA683F00935566 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				150CE2361BDA683F00935566 /* DialogScourceCode */,
+				150CE24F1BDA683F00935566 /* DialogScourceCodeTests */,
+				150CE25A1BDA683F00935566 /* DialogScourceCodeUITests */,
+				15CB253F1BEC5D10000D4FC5 /* Dialog.Framework */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		150CE2351BDA683F00935566 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				150CE24A1BDA683F00935566 /* LaunchScreen.storyboard in Resources */,
+				150CE2471BDA683F00935566 /* Assets.xcassets in Resources */,
+				150CE2451BDA683F00935566 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		150CE24E1BDA683F00935566 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		150CE2591BDA683F00935566 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15CB253E1BEC5D10000D4FC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		150CE2331BDA683F00935566 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				158DF14A1BEC7CF5007B1315 /* PYDailogTools.m in Sources */,
+				158DF14B1BEC7CF5007B1315 /* PYPopupTools.m in Sources */,
+				150CE2421BDA683F00935566 /* ViewController.m in Sources */,
+				150CE23F1BDA683F00935566 /* AppDelegate.m in Sources */,
+				158DF14C1BEC7CF5007B1315 /* PYSheetTools.m in Sources */,
+				158DF14D1BEC7CF5007B1315 /* PYToastTools.m in Sources */,
+				150CE23C1BDA683F00935566 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		150CE24C1BDA683F00935566 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				150CE2551BDA683F00935566 /* DialogScourceCodeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		150CE2571BDA683F00935566 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				150CE2601BDA683F00935566 /* DialogScourceCodeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15CB253B1BEC5D10000D4FC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15EE322D1C0586C200A95341 /* PYDailogTools.m in Sources */,
+				15EE322E1C0586C200A95341 /* PYPopupTools.m in Sources */,
+				15EE322F1C0586C200A95341 /* PYToastTools.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		150CE2521BDA683F00935566 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 150CE2361BDA683F00935566 /* DialogScourceCode */;
+			targetProxy = 150CE2511BDA683F00935566 /* PBXContainerItemProxy */;
+		};
+		150CE25D1BDA683F00935566 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 150CE2361BDA683F00935566 /* DialogScourceCode */;
+			targetProxy = 150CE25C1BDA683F00935566 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		150CE2431BDA683F00935566 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				150CE2441BDA683F00935566 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		150CE2481BDA683F00935566 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				150CE2491BDA683F00935566 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		150CE2621BDA683F00935566 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		150CE2631BDA683F00935566 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		150CE2651BDA683F00935566 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = DialogScourceCode/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Dialog.DialogScourceCode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		150CE2661BDA683F00935566 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = DialogScourceCode/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Dialog.DialogScourceCode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		150CE2681BDA683F00935566 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DialogScourceCodeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Dialog.DialogScourceCodeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DialogScourceCode.app/DialogScourceCode";
+			};
+			name = Debug;
+		};
+		150CE2691BDA683F00935566 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DialogScourceCodeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Dialog.DialogScourceCodeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DialogScourceCode.app/DialogScourceCode";
+			};
+			name = Release;
+		};
+		150CE26B1BDA683F00935566 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DialogScourceCodeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Dialog.DialogScourceCodeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DialogScourceCode;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		150CE26C1BDA683F00935566 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DialogScourceCodeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Dialog.DialogScourceCodeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DialogScourceCode;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+		15CB254A1BEC5D10000D4FC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Dialog.Framework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "Dialog.Dialog-Framework";
+				PRODUCT_NAME = Dialog;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		15CB254B1BEC5D10000D4FC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Dialog.Framework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "Dialog.Dialog-Framework";
+				PRODUCT_NAME = Dialog;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		150CE2321BDA683F00935566 /* Build configuration list for PBXProject "DialogScourceCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				150CE2621BDA683F00935566 /* Debug */,
+				150CE2631BDA683F00935566 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		150CE2641BDA683F00935566 /* Build configuration list for PBXNativeTarget "DialogScourceCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				150CE2651BDA683F00935566 /* Debug */,
+				150CE2661BDA683F00935566 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		150CE2671BDA683F00935566 /* Build configuration list for PBXNativeTarget "DialogScourceCodeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				150CE2681BDA683F00935566 /* Debug */,
+				150CE2691BDA683F00935566 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		150CE26A1BDA683F00935566 /* Build configuration list for PBXNativeTarget "DialogScourceCodeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				150CE26B1BDA683F00935566 /* Debug */,
+				150CE26C1BDA683F00935566 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15CB25491BEC5D10000D4FC5 /* Build configuration list for PBXNativeTarget "Dialog.Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15CB254A1BEC5D10000D4FC5 /* Debug */,
+				15CB254B1BEC5D10000D4FC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 150CE22F1BDA683F00935566 /* Project object */;
+}
