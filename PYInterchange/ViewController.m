@@ -25,7 +25,7 @@
     PYProgressView *view = [PYProgressView new];
     view.progressText = [[NSAttributedString alloc] initWithString:@"请稍后..."];
     [PYPopupTools showWithTargetView:view];
-    [PYPopupTools setMoveable:NO targetView:view];
+    [PYPopupTools setMoveable:YES targetView:view];
     self.progressView = view;
     //  后台执行：
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
@@ -33,6 +33,9 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             [PYPopupTools hiddenWithTargetView:self.progressView];
             self.progressView.flagStop = true;
+            
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"adsfasd" delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil];
+            [alertView show];
         });
     });
 }

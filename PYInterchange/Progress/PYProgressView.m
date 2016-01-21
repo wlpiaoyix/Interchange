@@ -18,7 +18,7 @@
 CGFloat MAXPYProgressViewWidth = 260;
 CGFloat MAXPYProgressViewHeight = 300;
 CGFloat MINPYProgressViewWith = 80;
-CGFloat MINPYProgressViewHeight = 60;
+CGFloat MINPYProgressViewHeight = 40;
 CGFloat MAXPYProgressMessageSpace = 10;
 
 @interface PYProgressView()
@@ -36,7 +36,7 @@ CGFloat MAXPYProgressMessageSpace = 10;
     return self;
 }
 -(void) initWithParams{
-    self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
+    self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
     [self setCornerRadiusAndBorder:5 borderWidth:1 borderColor:[UIColor whiteColor]];
     self.lableMessage = [UILabel new];
     self.lableMessage.backgroundColor = [UIColor clearColor];
@@ -45,9 +45,8 @@ CGFloat MAXPYProgressMessageSpace = 10;
     self.lableMessage.font = [UIFont boldSystemFontOfSize:16];
     self.lableMessage.textColor = [UIColor whiteColor];
     [self addSubview:self.lableMessage];
-//    [PYViewAutolayoutCenter persistConstraint:self.lableMessage relationmargins:UIEdgeInsetsMake(MAXPYProgressMessageSpace, MAXPYProgressMessageSpace, MAXPYProgressMessageSpace, MAXPYProgressMessageSpace) relationToItems:PYEdgeInsetsItemMake(nil, nil, nil,nil)];
     @weakify(self);
-    self.gt = [PYGraphicsThumb graphicsThumbWithView:self block:^(CGContextRef ctx, id userInfo) {
+    self.gt = [PYGraphicsThumb graphicsThumbWithView:self.lableMessage block:^(CGContextRef ctx, id userInfo) {
         @strongify(self);
         CGFloat value = 0;
         if (userInfo && [userInfo isKindOfClass:[NSNumber class]]) {
@@ -55,19 +54,19 @@ CGFloat MAXPYProgressMessageSpace = 10;
         }
         value = MAX(0, value);
         value = MIN(1, value);
-        CGPoint p1 = CGPointMake(0, self.layer.cornerRadius);
-        CGPoint p4 = CGPointMake(self.frameWidth , self.frameHeight - self.layer.cornerRadius);
-        UIColor *color1 = self.backgroundColor;
-        UIColor *color2 = self.backgroundColor;
+        CGPoint p1 = CGPointMake(0, 0);
+        CGPoint p2 = CGPointMake(self.lableMessage.frameWidth , self.lableMessage.frameHeight);
+        UIColor *color1 = [UIColor grayColor];
+        UIColor *color2 = [UIColor clearColor];
         [PYGraphicsDraw drawLinearGradientWithContext:ctx colorValues:(CGFloat[]){
             color1.red, color1.green, color1.blue, color1.alpha,
-            1,1,1,0.3,
-            color2.red, color2.green, color2.blue, color2.alpha
+            color2.red, color2.green, color2.blue, color2.alpha,
+            color1.red, color1.green, color1.blue, color1.alpha
         } alphas:(CGFloat[]){
             0.0f,
             value,
             1.0f
-        } length:3  startPoint:p1 endPoint:p4];
+        } length:3  startPoint:p1 endPoint:p2];
     }];
     self.flagStop = true;
     self.flagStop = false;

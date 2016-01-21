@@ -32,18 +32,18 @@
 #define PYUTILE_STATIC_INLINE	static inline
 #endif
 
-#ifndef __OPTIMIZE__   // debug version
-#    define NSLog(...) NSLog(__VA_ARGS__)
-#    define LOG_ENTER_PAGE_EVENT(_label) {}
-#    define BEGIN_LOG_PAGE {}
-#    define END_LOG_PAGE {}
-#else      // release version
-#    define NSLog(...) {}
-#    define LOG_ENTER_PAGE_EVENT(_label) [MobClick event:@"enter_page" label:(_label)]
-#    define BEGIN_LOG_PAGE [MobClick beginLogPageView:NSStringFromClass([self class])]
-#    define END_LOG_PAGE [MobClick endLogPageView:NSStringFromClass([self class])]
-
-#endif
+//#ifndef __OPTIMIZE__   // debug version
+//#    define NSLog(...) NSLog(__VA_ARGS__)
+//#    define LOG_ENTER_PAGE_EVENT(_label) {}
+//#    define BEGIN_LOG_PAGE {}
+//#    define END_LOG_PAGE {}
+//#else      // release version
+//#    define NSLog(...) {}
+//#    define LOG_ENTER_PAGE_EVENT(_label) [MobClick event:@"enter_page" label:(_label)]
+//#    define BEGIN_LOG_PAGE [MobClick beginLogPageView:NSStringFromClass([self class])]
+//#    define END_LOG_PAGE [MobClick endLogPageView:NSStringFromClass([self class])]
+//
+//#endif
 
 extern const NSString * documentDir;
 extern const NSString * cachesDir;
@@ -87,10 +87,6 @@ double parseCoordinateToDistance(double lat1, double lng1, double lat2, double l
  汉字转拼音
  */
 + (NSString *) chineseToSpell:(NSString*)sourceString;
-//==>等待框
-+(void) showProgress:(NSString*) message;
-+(void) hiddenProgress;
-//<==
 /**
  添加不向服务器备份的Document下的路径
  */

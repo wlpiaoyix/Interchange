@@ -7,13 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-//标题栏的背景颜色
-extern UIColor * _Nullable STATIC_TITLEVIEW_BACKGROUNDCLOLOR;
-//标题栏的边框颜色
-extern UIColor * _Nullable STATIC_TITLEVIEW_BORDERCLOLOR;
-//对话框的宽度，仅当在调用了 setMessage 方法后有效，其他情况以targetView的大小为准
-extern CGFloat DailogFrameWith;
-typedef void(^BlockDialogOpt)(UIView * _Nonnull view, NSUInteger index);
+#import "PYPopupParams.h"
 
 /**
  对话框
@@ -28,7 +22,7 @@ typedef void(^BlockDialogOpt)(UIView * _Nonnull view, NSUInteger index);
  文字类容，当前的view会被改变宽度
  @blockStyle 设置文字样式，需要CoreText的支持
  */
-+(void) setMessage:(nonnull NSString*) message blockStyle:(void (^ _Nullable) (NSAttributedString * _Nonnull attArg)) blockStyle targetView:(nonnull UIView*) targetView;
++(void) setMessage:(nonnull NSString*) message blockStyle:(void (^ _Nullable) (NSMutableAttributedString * _Nonnull attArg)) blockStyle targetView:(nonnull UIView*) targetView;
 /**
  创建按钮的block
  */
@@ -41,4 +35,5 @@ typedef void(^BlockDialogOpt)(UIView * _Nonnull view, NSUInteger index);
  显示对话框
  */
 +(void) showWithTargetView:(nonnull UIView*) targetView block:(nullable BlockDialogOpt) block buttonNames:(nonnull NSArray<NSString*>*)buttonNames;
++(void) hiddenWithTargetView:(nonnull UIView*) targetView;
 @end

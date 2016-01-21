@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "15632BAB1C4CD951006D3B09"
-               BuildableName = "PYInterchange.framework.framework"
+               BuildableName = "PYInterchange.framework"
                BlueprintName = "PYInterchange.framework"
                ReferencedContainer = "container:PYInterchange.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "15632BAB1C4CD951006D3B09"
-            BuildableName = "PYInterchange.framework.framework"
+            BuildableName = "PYInterchange.framework"
             BlueprintName = "PYInterchange.framework"
             ReferencedContainer = "container:PYInterchange.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "15632BAB1C4CD951006D3B09"
-            BuildableName = "PYInterchange.framework.framework"
+            BuildableName = "PYInterchange.framework"
             BlueprintName = "PYInterchange.framework"
             ReferencedContainer = "container:PYInterchange.xcodeproj">
          </BuildableReference>

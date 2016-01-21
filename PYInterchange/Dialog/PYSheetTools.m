@@ -26,7 +26,7 @@
             __bView.frameY = boundsHeight() - __bView.frameHeight;
             __bView.alpha = 1;
         } completion:^(BOOL finished) {
-            __bBlock();
+            __bBlock(__bView);
         }];
     } targetView:targetView];
     [PYPopupTools setBlockHiddenAnimation:^(UIView * _Nonnull view, BlockPopupEndAnmation  _Nullable block) {
@@ -37,7 +37,7 @@
            __bView.frameY = boundsHeight();
             __bView.alpha = 0;
         } completion:^(BOOL finished) {
-            __bBlock();
+            __bBlock(__bView);
         }];
     } targetView:targetView];
     

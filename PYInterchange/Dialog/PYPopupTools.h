@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-typedef void (^BlockTouchView)(CGPoint point, UIView  * _Nonnull touchView);
-typedef void (^BlockPopupEndAnmation) (void);
-typedef void (^BlockPopupAnimation) (UIView * _Nonnull view, BlockPopupEndAnmation _Nullable block);
+#import "PYPopupParams.h"
 
 @interface PYPopupTools : NSObject
 +(void) setMoveable:(BOOL) moveable targetView:(nonnull UIView*) targetView;

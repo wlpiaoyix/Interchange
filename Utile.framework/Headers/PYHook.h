@@ -11,5 +11,4 @@
 @interface PYHook : NSObject
 + (BOOL)mergeHookInstanceWithTarget:(Class) target action:(SEL) action blockBefore:(BOOL (^) (NSInvocation * invoction)) blockBefore blockAfter:(void (^) (NSInvocation * invoction)) blockAfter;
 + (BOOL)removeHookInstanceWithTarget:(Class) target action:(SEL) action;
-
 @end

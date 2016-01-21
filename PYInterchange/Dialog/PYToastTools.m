@@ -78,7 +78,7 @@
         [UIView animateWithDuration:.5 animations:^{
             __bView.alpha = 1;
         } completion:^(BOOL finished) {
-            __bBlock();
+            __bBlock(__bView);
         }];
     } targetView:targetView];
     [PYPopupTools setBlockHiddenAnimation:^(UIView * _Nonnull view, BlockPopupEndAnmation  _Nullable block) {
@@ -88,7 +88,7 @@
         [UIView animateWithDuration:.5 animations:^{
             __bView.alpha = 0;
         } completion:^(BOOL finished) {
-            __bBlock();
+            __bBlock(__bView);
         }];
     } targetView:targetView];
     
