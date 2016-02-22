@@ -32,18 +32,18 @@
 #define PYUTILE_STATIC_INLINE	static inline
 #endif
 
-//#ifndef __OPTIMIZE__   // debug version
-//#    define NSLog(...) NSLog(__VA_ARGS__)
-//#    define LOG_ENTER_PAGE_EVENT(_label) {}
-//#    define BEGIN_LOG_PAGE {}
-//#    define END_LOG_PAGE {}
-//#else      // release version
-//#    define NSLog(...) {}
-//#    define LOG_ENTER_PAGE_EVENT(_label) [MobClick event:@"enter_page" label:(_label)]
-//#    define BEGIN_LOG_PAGE [MobClick beginLogPageView:NSStringFromClass([self class])]
-//#    define END_LOG_PAGE [MobClick endLogPageView:NSStringFromClass([self class])]
-//
-//#endif
+#ifndef __OPTIMIZE__   // debug version
+#    define NSLog(...) NSLog(__VA_ARGS__)
+#    define LOG_ENTER_PAGE_EVENT(_label) {}
+#    define BEGIN_LOG_PAGE {}
+#    define END_LOG_PAGE {}
+#else      // release version
+#    define NSLog(...) {}
+#    define LOG_ENTER_PAGE_EVENT(_label) [MobClick event:@"enter_page" label:(_label)]
+#    define BEGIN_LOG_PAGE [MobClick beginLogPageView:NSStringFromClass([self class])]
+#    define END_LOG_PAGE [MobClick endLogPageView:NSStringFromClass([self class])]
+
+#endif
 
 extern const NSString * documentDir;
 extern const NSString * cachesDir;
@@ -70,31 +70,33 @@ double parseCoordinateToDistance(double lat1, double lng1, double lat2, double l
 /**
  获取plist文件的类容
  */
-+(NSDictionary*) getInfoPlistWithName:(NSString*) name;
++(NSDictionary*) getInfoPlistWithName:(nonnull NSString *) name;
 //==>
 //计算文字占用的大小
-+(CGSize) getBoundSizeWithTxt:(NSString*) txt font:(UIFont*) font size:(CGSize) size;
++(CGSize) getBoundSizeWithTxt:(nonnull NSString *) txt font:(nonnull UIFont *) font size:(CGSize) size;
+//计算文字占用的大小
++(CGSize) getBoundSizeWithAttributeTxt:(nonnull NSAttributedString *) attributeTxt size:(CGSize) size;
 /**
  计算指定字体对应的高度
  */
-+(CGFloat) getFontHeightWithSize:(CGFloat) size fontName:(NSString*) fontName;
++(CGFloat) getFontHeightWithSize:(CGFloat) size fontName:(nonnull NSString *) fontName;
 /**
  计算指定高度对应的字体大小
  */
-+(CGFloat) getFontSizeWithHeight:(CGFloat) height fontName:(NSString*) fontName;
++(CGFloat) getFontSizeWithHeight:(CGFloat) height fontName:(nonnull NSString *) fontName;
 //<==
 /**
  汉字转拼音
  */
-+ (NSString *) chineseToSpell:(NSString*)sourceString;
++ (nonnull NSString *) chineseToSpell:(nonnull NSString *)sourceString;
 /**
  添加不向服务器备份的Document下的路径
  */
-+(BOOL) addSkipBackupAttributeToItemAtURL:(NSString *)url;
++(BOOL) addSkipBackupAttributeToItemAtURL:(nonnull NSString *)url;
 /**
  简易发声
  */
-+(BOOL) soundWithPath:(NSString*) path isShake:(BOOL) isShake;
++(BOOL) soundWithPath:(nonnull NSString *) path isShake:(BOOL) isShake;
 
 
 @end

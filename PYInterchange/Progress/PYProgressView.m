@@ -25,6 +25,7 @@ CGFloat MAXPYProgressMessageSpace = 10;
 
 @property (nonatomic, strong) UILabel *lableMessage;
 @property (nonatomic, strong) PYGraphicsThumb *gt;
+@property (nonatomic, strong) NSLock * lockGt;;
 
 @end
 
@@ -36,6 +37,7 @@ CGFloat MAXPYProgressMessageSpace = 10;
     return self;
 }
 -(void) initWithParams{
+    self.lockGt = [NSLock new];
     self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
     [self setCornerRadiusAndBorder:5 borderWidth:1 borderColor:[UIColor whiteColor]];
     self.lableMessage = [UILabel new];
@@ -45,13 +47,17 @@ CGFloat MAXPYProgressMessageSpace = 10;
     self.lableMessage.font = [UIFont boldSystemFontOfSize:16];
     self.lableMessage.textColor = [UIColor whiteColor];
     [self addSubview:self.lableMessage];
-    @weakify(self);
+    @unsafeify(self);
     self.gt = [PYGraphicsThumb graphicsThumbWithView:self.lableMessage block:^(CGContextRef ctx, id userInfo) {
         @strongify(self);
-        CGFloat value = 0;
+        CGFloat value = - 1;
         if (userInfo && [userInfo isKindOfClass:[NSNumber class]]) {
             value = ((NSNumber*)userInfo).floatValue;
         }
+        if (value < 0) {
+            return;
+        }
+        
         value = MAX(0, value);
         value = MIN(1, value);
         CGPoint p1 = CGPointMake(0, 0);
@@ -72,15 +78,34 @@ CGFloat MAXPYProgressMessageSpace = 10;
     self.flagStop = false;
 }
 -(void) setFlagStop:(BOOL)flagStop{
-    if (_flagStop == false && flagStop == false) {
+    
+    if (self.flagStop == flagStop) {
         return;
     }
+    
     _flagStop = flagStop;
-    if (!flagStop) {
-        //  后台执行：
+    
+    if (flagStop) {
+        //后台执行：
         @unsafeify(self);
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             @strongify(self);
+            
+            [self.lockGt lock];
+            @unsafeify(self);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                @strongify(self);
+                [self.gt executDisplay:@(-1)];
+                [self.lockGt unlock];
+            });
+        });
+    }else{
+        //后台执行：
+        @unsafeify(self);
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            @strongify(self);
+            
+            [self.lockGt lock];
             CGFloat value = 0;
             while (!self.flagStop) {
                 value = MAX(0, value);
@@ -96,6 +121,7 @@ CGFloat MAXPYProgressMessageSpace = 10;
                     value = 0;
                 }
             }
+            [self.lockGt unlock];
         });
     }
 }

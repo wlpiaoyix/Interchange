@@ -1,22 +1,22 @@
 //
-//  PYDailogTools.m
+//  PYDialogTools.m
 //  DialogScourceCode
 //
 //  Created by wlpiaoyi on 15/10/27.
 //  Copyright © 2015年 wlpiaoyi. All rights reserved.
 //
 
-#import "PYDailogTools.h"
+#import "PYDialogTools.h"
 #import "PYPopupTools.h"
 #import "UIView+Dialog.h"
 
 
-@implementation PYDailogTools
+@implementation PYDialogTools
 +(void) setTitle:(nonnull NSString*) title targetView:(nonnull UIView*) targetView{
-    [targetView setDailogTitle:title];
+    [targetView setDialogTitle:title];
 }
 +(void) setTitleFont:(nonnull UIFont*) font targetView:(nonnull UIView*) targetView{
-    [targetView setDailogTitleFont:font];
+    [targetView setDialogTitleFont:font];
 }
 +(void) setMessage:(nonnull NSString*) message blockStyle:(void (^) (NSMutableAttributedString* attArg)) blockStyle targetView:(nonnull UIView*) targetView{
     [targetView setDialogMessage:message blockStyle:blockStyle];
@@ -31,7 +31,7 @@
     [targetView setBlockTitleStyle:blockTitleStyle];
 }
 +(void) showWithTargetView:(nonnull UIView*) targetView block:(nullable BlockDialogOpt) block buttonNames:(nonnull NSArray<NSString*>*)buttonNames{
-    [targetView showWithBlock:block buttonNames:buttonNames];
+    [targetView dialogShowWithBlock:block buttonNames:buttonNames];
 }
 +(void) hiddenWithTargetView:(nonnull UIView*) targetView{
     [PYPopupTools hiddenWithTargetView:targetView];

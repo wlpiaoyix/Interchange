@@ -12,7 +12,7 @@
 #import "UIView+Popup.h"
 #import "UIView+Dialog.h"
 
-#import "PYDailogTools.h"
+#import "PYDialogTools.h"
 #import "PYPopupTools.h"
 #import "PYToastTools.h"
 

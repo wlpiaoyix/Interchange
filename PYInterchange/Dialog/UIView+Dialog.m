@@ -10,13 +10,12 @@
 #import "UIView+Popup.h"
 #import "UIView+Remove.h"
 #import <Utile/Utile.Framework.h>
-#import <CoreText/CoreText.h>
 #import <objc/runtime.h>
 
 
 UIColor * _Nullable STATIC_TITLEVIEW_BACKGROUNDCLOLOR = nil;
 UIColor * _Nullable STATIC_TITLEVIEW_BORDERCLOLOR = nil;
-CGFloat DailogFrameWith = 280;
+CGFloat DialogFrameWith = 280;
 
 static const void *BlockButtonStylePointer = &BlockButtonStylePointer;
 static const void *BlockTitleStylePointer = &BlockTitleStylePointer;
@@ -31,17 +30,17 @@ static const void *UIViewMessagePointer = &UIViewMessagePointer;
 
 @implementation UIView(Dialog)
 
--(void) setDailogTitle:(nullable NSString *) title{
+-(void) setDialogTitle:(nullable NSString *) title{
     objc_setAssociatedObject(self, UIViewTitlePointer, title, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
--(nullable NSString *) dailogTitle{
+-(nullable NSString *) dialogTitle{
     return objc_getAssociatedObject(self, UIViewTitlePointer);
 }
 
--(void) setDailogTitleFont:(nullable UIFont *) font{
+-(void) setDialogTitleFont:(nullable UIFont *) font{
     objc_setAssociatedObject(self, UIViewTitleFontPointer, font, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
--(nullable UIFont *) dailogTitleFont{
+-(nullable UIFont *) dialogTitleFont{
     return objc_getAssociatedObject(self, UIViewTitleFontPointer);
 }
 -(void) setBlockDialogOpt:(BlockDialogOpt) block{
@@ -72,25 +71,26 @@ static const void *UIViewMessagePointer = &UIViewMessagePointer;
         [subView removeFromSuperview];
     }
     CGRect r = self.frame;
-    r.size.width = DailogFrameWith;
+    r.size.width = DialogFrameWith;
     self.frame = r;
     
-    r = CGRectMake(5, 0, DailogFrameWith -10, 44);
+    r = CGRectMake(5, 0, DialogFrameWith -10, 44);
     [self messageLable].frame = r;
     NSMutableAttributedString *attMsg = [[NSMutableAttributedString alloc] initWithString:message];
-    NSRange range = NSMakeRange(0, attMsg.length);
-    [attMsg removeAttribute:(NSString*)kCTForegroundColorAttributeName range:range];
-    [attMsg removeAttribute:(NSString*)kCTFontAttributeName range:range];
-    [attMsg addAttribute:(NSString*)kCTForegroundColorAttributeName value:[UIColor grayColor] range:NSMakeRange(0, attMsg.length)];//颜色
-    [attMsg addAttribute:(NSString*)kCTFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, attMsg.length)];
     if (blockStyle) {
         blockStyle(attMsg);
+    }else{
+        NSRange range = NSMakeRange(0, attMsg.length);
+        [attMsg removeAttribute:NSForegroundColorAttributeName range:range];
+        [attMsg removeAttribute:NSFontAttributeName range:range];
+        [attMsg addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:NSMakeRange(0, attMsg.length)];//颜色
+        [attMsg addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, attMsg.length)];
     }
     [self messageLable].attributedText = attMsg;
     [self addSubview:[self messageLable]];
     
     r = [self messageLable].frame;
-    r.size = [PYUtile getBoundSizeWithTxt:message font:[self messageLable].font size:CGSizeMake([self messageLable].frame.size.width, 999)];
+    r.size = [PYUtile getBoundSizeWithAttributeTxt:attMsg size:CGSizeMake([self messageLable].frame.size.width, 999)];
     r.size.height += 30;
     r.size.width = [self messageLable].frame.size.width;
     [self messageLable].frame = r;
@@ -100,7 +100,7 @@ static const void *UIViewMessagePointer = &UIViewMessagePointer;
     self.frame = r;
     
 }
--(void) showWithBlock:(BlockDialogOpt) block buttonNames:(nonnull NSArray<NSString*>*)buttonNames{
+-(void) dialogShowWithBlock:(BlockDialogOpt) block buttonNames:(nonnull NSArray<NSString*>*)buttonNames{
     
     static dispatch_once_t predicate;
     dispatch_once(&predicate, ^{
@@ -113,34 +113,34 @@ static const void *UIViewMessagePointer = &UIViewMessagePointer;
     });
     UIView *showView = [UIView new];
     [self setBlockDialogOpt:block];
-    [self setDailogTitleView:[self createTitleViewWithTitle:[self dailogTitle]]];
+    [self setDialogTitleView:[self createTitleViewWithTitle:[self dialogTitle]]];
     [self setButtonView:[self createButtonView:buttonNames]];
     
     CGRect r;
-    if([self dailogTitleView]){
-        r = [self dailogTitleView].frame;
+    if([self dialogTitleView]){
+        r = [self dialogTitleView].frame;
         r.origin = CGPointMake(0, 0);
-        [self dailogTitleView].frame  = r;
+        [self dialogTitleView].frame  = r;
     }
     
     r = self.frame;
-    r.size.height += [self dailogTitleView] ? [self dailogTitleView].frame.size.height : 0;
+    r.size.height += [self dialogTitleView] ? [self dialogTitleView].frame.size.height : 0;
     r.size.height += [self buttonView] ? [self buttonView].frame.size.height : 0;
     showView.frame = r;
     
     r = self.frame;
-    r.origin.y = [self dailogTitleView] ? [self dailogTitleView].frame.size.height : 0;
+    r.origin.y = [self dialogTitleView] ? [self dialogTitleView].frame.size.height : 0;
     r.origin.x = 0;
     self.frame = r;
     [showView addSubview:self];
     if([self buttonView]){
         r = [self buttonView].frame;
         r.origin.x = 0;
-        r.origin.y = [self dailogTitleView].frame.size.height + self.frame.size.height;
+        r.origin.y = [self dialogTitleView].frame.size.height + self.frame.size.height;
         [self buttonView].frame = r;
     }
-    if([self dailogTitleView]){
-        [showView addSubview:[self dailogTitleView]];
+    if([self dialogTitleView]){
+        [showView addSubview:[self dialogTitleView]];
     }
     if([self buttonView]){
         [showView addSubview:[self buttonView]];
@@ -157,6 +157,9 @@ static const void *UIViewMessagePointer = &UIViewMessagePointer;
     showView.backgroundColor = [UIColor whiteColor];
     [showView setClipsToBounds:YES];
 }
+-(void) dialogHidden{
+    [self popupHidden];
+}
 -(UIView*) createButtonView:(NSArray*) names{
     if (!names || ![names count]) {
         return nil;
@@ -167,14 +170,14 @@ static const void *UIViewMessagePointer = &UIViewMessagePointer;
     UIView *view = [UIView new];
     view.backgroundColor = [UIColor clearColor];
     view.frame = r;
-    view.backgroundColor = [self dailogTitleView].backgroundColor;
-    view.layer.borderColor = [self dailogTitleView].layer.borderColor;
-    view.layer.borderWidth = [self dailogTitleView].layer.borderWidth;
-    view.layer.cornerRadius = [self dailogTitleView].layer.cornerRadius;
-    view.layer.shadowRadius = [self dailogTitleView].layer.shadowRadius;
-    view.layer.shadowOpacity = [self dailogTitleView].layer.shadowOpacity;
+    view.backgroundColor = [self dialogTitleView].backgroundColor;
+    view.layer.borderColor = [self dialogTitleView].layer.borderColor;
+    view.layer.borderWidth = [self dialogTitleView].layer.borderWidth;
+    view.layer.cornerRadius = [self dialogTitleView].layer.cornerRadius;
+    view.layer.shadowRadius = [self dialogTitleView].layer.shadowRadius;
+    view.layer.shadowOpacity = [self dialogTitleView].layer.shadowOpacity;
     view.layer.shadowColor = [view.backgroundColor CGColor];
-    view.layer.shadowOffset = [self dailogTitleView].layer.shadowOffset;
+    view.layer.shadowOffset = [self dialogTitleView].layer.shadowOffset;
     view.clipsToBounds = NO;
     
     if ([names count] == 0) {
@@ -203,7 +206,7 @@ static const void *UIViewMessagePointer = &UIViewMessagePointer;
         button.tag = indexName;
         
         
-        button.backgroundColor = [self dailogTitleView].backgroundColor;
+        button.backgroundColor = [self dialogTitleView].backgroundColor;
         button.layer.borderColor = view.layer.borderColor;
         button.layer.borderWidth = view.layer.borderWidth;
         button.layer.cornerRadius = 0;
@@ -250,7 +253,7 @@ static const void *UIViewMessagePointer = &UIViewMessagePointer;
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     
     [button setTitle:name forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor colorWithCGColor:[self dailogTitleView].layer.borderColor] forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor colorWithCGColor:[self dialogTitleView].layer.borderColor] forState:UIControlStateNormal];
     [button setTitleColor:backgroundColor forState:UIControlStateHighlighted];
     
     [button setBackgroundImage:[[self class] imageWithColor:backgroundColor] forState:UIControlStateNormal];
@@ -277,10 +280,10 @@ static const void *UIViewMessagePointer = &UIViewMessagePointer;
     UILabel *lable = [UILabel new];
     lable.text = title ? title : @"";
     lable.numberOfLines = 1;
-    if (![self dailogTitleFont]) {
-        [self setDailogTitleFont:[UIFont systemFontOfSize:20]];
+    if (![self dialogTitleFont]) {
+        [self setDialogTitleFont:[UIFont systemFontOfSize:20]];
     }
-    lable.font = [self dailogTitleFont];
+    lable.font = [self dialogTitleFont];
     lable.textAlignment = NSTextAlignmentCenter;
     lable.textColor = [UIColor colorWithCGColor:view.layer.borderColor];
     lable.backgroundColor = [UIColor clearColor];
@@ -294,10 +297,10 @@ static const void *UIViewMessagePointer = &UIViewMessagePointer;
     return view;
 }
 
--(UIView*) dailogTitleView{
+-(UIView*) dialogTitleView{
     return objc_getAssociatedObject(self, UIViewTitleViewPointer);
 }
--(void) setDailogTitleView:(UIView*) view{
+-(void) setDialogTitleView:(UIView*) view{
     objc_setAssociatedObject(self, UIViewTitleViewPointer, view, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 -(UIView*) buttonView{

@@ -1,5 +1,5 @@
 //
-//  PYDailogTools.h
+//  PYDialogTools.h
 //  DialogScourceCode
 //
 //  Created by wlpiaoyi on 15/10/27.
@@ -12,7 +12,7 @@
 /**
  对话框
  */
-@interface PYDailogTools : NSObject
+@interface PYDialogTools : NSObject
 //==>标题
 +(void) setTitle:(nonnull NSString*) title targetView:(nonnull UIView*) targetView;
 +(void) setTitleFont:(nonnull UIFont*) font targetView:(nonnull UIView*) targetView;
@@ -34,6 +34,6 @@
 /**
  显示对话框
  */
-+(void) showWithTargetView:(nonnull UIView*) targetView block:(nullable BlockDialogOpt) block buttonNames:(nonnull NSArray<NSString*>*)buttonNames;
++(void) showWithTargetView:(nonnull UIView*) targetView block:(nullable BlockDialogOpt) block buttonNames:(nonnull NSArray<NSString*>*)buttonNames NS_DEPRECATED_IOS(1_0, 6_0, "no use") __TVOS_PROHIBITED;
 +(void) hiddenWithTargetView:(nonnull UIView*) targetView;
 @end

@@ -12,7 +12,7 @@
 @interface PYPopupTools : NSObject
 +(void) setMoveable:(BOOL) moveable targetView:(nonnull UIView*) targetView;
 //==>
-+(void) showWithTargetView:(nonnull UIView*) targetView;
++(void) showWithTargetView:(nonnull UIView*) targetView NS_DEPRECATED_IOS(1_0, 6_0, "no use") __TVOS_PROHIBITED;
 +(void) hiddenWithTargetView:(nonnull UIView*) targetView;
 //<==
 /**
