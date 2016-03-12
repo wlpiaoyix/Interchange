@@ -10,8 +10,8 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^BlockKeyboardAnimatedDoing)(CGRect keyBoardFrame);
-typedef void (^BlockKeyboardAnimatedCompletion)(void);
+typedef void (^BlockKeyboardAnimatedDoing)(UIResponder * _Nonnull responder, CGRect keyBoardFrame);
+typedef void (^BlockKeyboardAnimatedCompletion)(UIResponder * _Nonnull responder);
 /**
  键盘监听
  目标对象被回收时自动隐藏键盘

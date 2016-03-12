@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface PYHook : NSObject
-+(BOOL) mergeHookInstanceWithTarget:(Class) target action:(SEL) action blockBefore:(BOOL (^) (NSInvocation * invoction)) blockBefore blockAfter:(void (^) (NSInvocation * invoction)) blockAfter;
-+(BOOL) removeHookInstanceWithTarget:(Class) target action:(SEL) action;
++(BOOL) mergeHookInstanceWithTarget:(nonnull Class) target action:(nonnull SEL) action blockBefore:(BOOL (^ _Nonnull) (NSInvocation * _Nonnull invoction)) blockBefore blockAfter:(void (^ _Nonnull) (NSInvocation * _Nonnull invoction)) blockAfter;
++(BOOL) removeHookInstanceWithTarget:(nonnull Class) target action:(nonnull SEL) action;
 
-+(BOOL) mergeHookClassWithTarget:(Class)target action:(SEL)action blockBefore:(BOOL (^)(NSInvocation *))blockBefore blockAfter:(void (^)(NSInvocation *))blockAfter;
-+(BOOL) removeHookClassWithTarget:(Class)target action:(SEL)action;
+//+(BOOL) mergeHookClassWithTarget:(nonnull Class)target action:(SEL)action blockBefore:(BOOL (^)(NSInvocation *))blockBefore blockAfter:(void (^)(NSInvocation *))blockAfter;
+//+(BOOL) removeHookClassWithTarget:(nonnull Class)target action:(nonnull SEL)action;
 
 +(nonnull NSArray<NSString *> *) createClassImp;
 @end

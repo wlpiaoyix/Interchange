@@ -21,10 +21,6 @@ FOUNDATION_EXPORT const unsigned char Utile_FrameworkVersionString[];
 #import "PYReflect.h"
 
 #import "PYHook.h"
-#import "UIViewController+Hook.h"
-#import "UIViewController+HookView.h"
-#import "UIViewController+HookOrientation.h"
-#import "UINavigationController+HookOrientation.h"
 
 #import "PYOrientationListener.h"
 #import "PYReachabilityListener.h"

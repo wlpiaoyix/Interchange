@@ -34,28 +34,26 @@
 
 #ifndef __OPTIMIZE__   // debug version
 #    define NSLog(...) NSLog(__VA_ARGS__)
-#    define LOG_ENTER_PAGE_EVENT(_label) {}
-#    define BEGIN_LOG_PAGE {}
-#    define END_LOG_PAGE {}
 #else      // release version
 #    define NSLog(...) {}
-#    define LOG_ENTER_PAGE_EVENT(_label) [MobClick event:@"enter_page" label:(_label)]
-#    define BEGIN_LOG_PAGE [MobClick beginLogPageView:NSStringFromClass([self class])]
-#    define END_LOG_PAGE [MobClick endLogPageView:NSStringFromClass([self class])]
-
 #endif
 
-extern const NSString * documentDir;
-extern const NSString * cachesDir;
-extern const NSString * bundleDir;
-extern const NSString * systemVersion;
+#define is64BitArm  __LP64__ || (TARGET_OS_EMBEDDED && !TARGET_OS_IPHONE) || TARGET_OS_WIN32 || NS_BUILD_32_LIKE_64
+
+
+extern const NSString * _Nonnull documentDir;
+extern const NSString * _Nonnull cachesDir;
+extern const NSString * _Nonnull bundleDir;
+extern const NSString * _Nonnull systemVersion;
 extern double EARTH_RADIUS;//地球半径
+
 //==>
 float boundsWidth();
 float boundsHeight();
 float appWidth();
 float appHeight();
 //<==
+
 //==>角度和弧度之间的转换
 double parseDegreesToRadians(double degrees);
 double parseRadiansToDegrees(double radians);
@@ -64,39 +62,51 @@ double parseRadiansToDegrees(double radians);
  经纬度转换距离 (KM)
  */
 double parseCoordinateToDistance(double lat1, double lng1, double lat2, double lng2);
+/**
+ cup使用率
+ */
+float cpu_usage();
 
 @interface PYUtile : NSObject
-+(UIViewController*) getCurrentController;
+
++(nullable UIViewController *) getCurrentController;
+
 /**
  获取plist文件的类容
  */
-+(NSDictionary*) getInfoPlistWithName:(nonnull NSString *) name;
++(nullable NSDictionary *) getInfoPlistWithName:(nonnull NSString *) name;
+
 //==>
 //计算文字占用的大小
 +(CGSize) getBoundSizeWithTxt:(nonnull NSString *) txt font:(nonnull UIFont *) font size:(CGSize) size;
+
 //计算文字占用的大小
 +(CGSize) getBoundSizeWithAttributeTxt:(nonnull NSAttributedString *) attributeTxt size:(CGSize) size;
+
 /**
  计算指定字体对应的高度
  */
 +(CGFloat) getFontHeightWithSize:(CGFloat) size fontName:(nonnull NSString *) fontName;
+
 /**
  计算指定高度对应的字体大小
  */
 +(CGFloat) getFontSizeWithHeight:(CGFloat) height fontName:(nonnull NSString *) fontName;
 //<==
+
 /**
  汉字转拼音
  */
 + (nonnull NSString *) chineseToSpell:(nonnull NSString *)sourceString;
+
 /**
  添加不向服务器备份的Document下的路径
  */
 +(BOOL) addSkipBackupAttributeToItemAtURL:(nonnull NSString *)url;
+
 /**
  简易发声
  */
 +(BOOL) soundWithPath:(nonnull NSString *) path isShake:(BOOL) isShake;
-
 
 @end

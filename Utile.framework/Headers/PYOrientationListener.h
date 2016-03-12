@@ -25,16 +25,20 @@
 //当前旋转方向
 @property(nonatomic,readonly) UIDeviceOrientation orientation;
 //旋转时间
-@property(nonatomic) float duration;
+@property(nonatomic) NSTimeInterval duration;
 +(nonnull instancetype) instanceSingle;
 /**
  旋转当前装置
  */
 -(void) attemptRotationToDeviceOrientation:(UIDeviceOrientation) deviceOrientation completion:(void (^ _Nullable)(void)) completion;
+-(void) addListener:(nonnull id<PYOrientationListener>) listener;
+-(void) removeListenser:(nonnull id<PYOrientationListener>) listener;
 /**
  是否支持旋转到当前方向
  */
--(BOOL) isSupportOrientation:(UIDeviceOrientation) orientation;
--(void) addListener:(nonnull id<PYOrientationListener>) listener;
--(void) removeListenser:(nonnull id<PYOrientationListener>) listener;
++(BOOL) isSupportOrientation:(UIDeviceOrientation) orientation;
+/**
+ 是否支持旋转到当前方向
+ */
++(BOOL) isSupportOrientation:(UIDeviceOrientation) orientation targetController:(nonnull UIViewController *) targetController;
 @end

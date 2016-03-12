@@ -54,16 +54,17 @@ static const NSString *OffsetOrgin_Y = @"Y";
 -(void) _hooklayoutSubviews{
     
     [self _hooklayoutSubviews];
-    
-    if (!self.mantleView || self.isAnimationing) {
-        return;
+    if (IOS8_OR_LATER) {
+        if (!self.mantleView || self.isAnimationing) {
+            return;
+        }
+        
+        if(class_conformsToProtocol([self.mantleView class], @protocol(TagMantelViewHookLayout))){
+            self.mantleView.frame = [UIScreen mainScreen].bounds;
+            [self reSetCenter];
+        }
+
     }
-    
-    if(class_conformsToProtocol([self.mantleView class], @protocol(TagMantelViewHookLayout))){
-        self.mantleView.frame = [UIScreen mainScreen].bounds;
-        [self reSetCenter];
-    }
-    
 }
 -(void) popupShow{
     @synchronized(self){
