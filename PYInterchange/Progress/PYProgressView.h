@@ -14,6 +14,9 @@ extern CGFloat MINPYProgressViewHeight;
 extern CGFloat MAXPYProgressMessageSpace;
 
 @interface PYProgressView : UIView
-@property (nonatomic, strong, nonnull) NSAttributedString * progressText;
-@property (nonatomic) BOOL flagStop;
+@property (nonatomic, strong, nullable) UIColor * color1;
+@property (nonatomic, strong, nullable) UIColor * color2;
+@property (nonatomic, strong, nonnull) NSAttributedString * textProgress;
+@property (nonatomic, strong, nullable) UIView * viewProgress;
+@property (nonatomic, copy, nullable) void (^blockCancel)(PYProgressView * _Nonnull target);
 @end

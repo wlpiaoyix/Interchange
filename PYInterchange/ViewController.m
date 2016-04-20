@@ -9,13 +9,12 @@
 #import "ViewController.h"
 #import "PYProgressView.h"
 #import "PYPopupTools.h"
-#import "GlLoadingView.h"
 #import "UIView+Popup.h"
 #import <Utile/UIView+Expand.h>
 
-UIView *progressView;
 
 @interface ViewController ()
+@property (nonatomic, assign) UIView *progressView;
 @end
 
 @implementation ViewController
@@ -26,21 +25,39 @@ UIView *progressView;
     
 }
 - (IBAction)onClickLoad:(id)sender {
-    progressView = [GlLoadingView new];
+    UIView * progressView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
+    
     [progressView setCornerRadiusAndBorder:1 borderWidth:1 borderColor:[UIColor redColor]];
+    [progressView popupShow];
+    self.progressView = progressView;
     //  后台执行：
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [progressView popupShow];
-        });
         
         [NSThread sleepForTimeInterval:3.0f];
         dispatch_async(dispatch_get_main_queue(), ^{
-            [progressView popupHidden];
+            UIView *view = [UIView new];
+            view.frame = CGRectMake(0, 0, 320, 580);
+            view.backgroundColor = [UIColor blueColor];
+            [[UIApplication sharedApplication].keyWindow addSubview:view];
+        });
+        [NSThread sleepForTimeInterval:4.0f];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.progressView popupHidden];
         });
     });
+    
 }
 - (IBAction)onclickNextView:(id)sender {
+    PYProgressView * pv = [PYProgressView new];
+    UIView * view = [UIView new];
+    view.backgroundColor = [UIColor redColor];
+    view.frameSize = CGSizeMake(150, 50);
+//    pv.viewProgress = view;
+    pv.textProgress = [[NSAttributedString alloc] initWithString:@"请稍后请稍后请稍后请稍后请..."];
+    [pv popupShow];
+    [pv setBlockCancel:^(PYProgressView * _Nonnull pv) {
+        [pv popupHidden];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

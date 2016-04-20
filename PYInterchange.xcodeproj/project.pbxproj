@@ -29,6 +29,9 @@
 		15632BC01C4CD985006D3B09 /* PYProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 15632B9C1C4CBD47006D3B09 /* PYProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15632BC11C4CDA00006D3B09 /* Utile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15632BA31C4CBD75006D3B09 /* Utile.framework */; };
 		15632BC21C4CDA17006D3B09 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15632BA51C4CBDC7006D3B09 /* AudioToolbox.framework */; };
+		15D43EE51CC5CDA200E44A17 /* UIView+LayerSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D43EE41CC5CDA200E44A17 /* UIView+LayerSwitch.m */; };
+		15D43EE61CC5CF6800E44A17 /* UIView+LayerSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D43EE41CC5CDA200E44A17 /* UIView+LayerSwitch.m */; };
+		15D43EE71CC5CF7400E44A17 /* UIView+LayerSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = 15D43EE31CC5CDA200E44A17 /* UIView+LayerSwitch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15D82C7A1C7AA7F400F4AA61 /* PYDialogTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D82C791C7AA7F400F4AA61 /* PYDialogTools.m */; };
 		15D82C7B1C7AA8A700F4AA61 /* PYDialogTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D82C791C7AA7F400F4AA61 /* PYDialogTools.m */; };
 		15D82C7C1C7AA8B500F4AA61 /* PYDialogTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 15D82C781C7AA7F400F4AA61 /* PYDialogTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -93,6 +96,8 @@
 		15632BAC1C4CD951006D3B09 /* PYInterchange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PYInterchange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15632BAE1C4CD951006D3B09 /* PYInterchange.framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYInterchange.framework.h; sourceTree = "<group>"; };
 		15632BB01C4CD951006D3B09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15D43EE31CC5CDA200E44A17 /* UIView+LayerSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LayerSwitch.h"; sourceTree = "<group>"; };
+		15D43EE41CC5CDA200E44A17 /* UIView+LayerSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayerSwitch.m"; sourceTree = "<group>"; };
 		15D82C781C7AA7F400F4AA61 /* PYDialogTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYDialogTools.h; sourceTree = "<group>"; };
 		15D82C791C7AA7F400F4AA61 /* PYDialogTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYDialogTools.m; sourceTree = "<group>"; };
 		15E164011C50997E00C6A842 /* UIView+Remove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Remove.h"; sourceTree = "<group>"; };
@@ -176,6 +181,8 @@
 		15632B921C4CBD47006D3B09 /* Dialog */ = {
 			isa = PBXGroup;
 			children = (
+				15632B951C4CBD47006D3B09 /* PYPopupTools.h */,
+				15632B961C4CBD47006D3B09 /* PYPopupTools.m */,
 				15D82C781C7AA7F400F4AA61 /* PYDialogTools.h */,
 				15D82C791C7AA7F400F4AA61 /* PYDialogTools.m */,
 				15E164071C509A2100C6A842 /* PYPopupParams.h */,
@@ -190,8 +197,8 @@
 				15E1640B1C509BD500C6A842 /* UIView+Popup.m */,
 				15E164011C50997E00C6A842 /* UIView+Remove.h */,
 				15E164021C50997E00C6A842 /* UIView+Remove.m */,
-				15632B951C4CBD47006D3B09 /* PYPopupTools.h */,
-				15632B961C4CBD47006D3B09 /* PYPopupTools.m */,
+				15D43EE31CC5CDA200E44A17 /* UIView+LayerSwitch.h */,
+				15D43EE41CC5CDA200E44A17 /* UIView+LayerSwitch.m */,
 			);
 			path = Dialog;
 			sourceTree = "<group>";
@@ -230,6 +237,7 @@
 				15E164151C50BE2700C6A842 /* UIView+Popup.h in Headers */,
 				15D82C7C1C7AA8B500F4AA61 /* PYDialogTools.h in Headers */,
 				15E164161C50BE2700C6A842 /* UIView+Remove.h in Headers */,
+				15D43EE71CC5CF7400E44A17 /* UIView+LayerSwitch.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +347,7 @@
 				15E164121C50B46300C6A842 /* UIView+Dialog.m in Sources */,
 				15632B9F1C4CBD47006D3B09 /* PYPopupTools.m in Sources */,
 				15632B831C4CBCFE006D3B09 /* ViewController.m in Sources */,
+				15D43EE51CC5CDA200E44A17 /* UIView+LayerSwitch.m in Sources */,
 				15632B801C4CBCFE006D3B09 /* AppDelegate.m in Sources */,
 				15632BA21C4CBD47006D3B09 /* PYProgressView.m in Sources */,
 				15632BA01C4CBD47006D3B09 /* PYSheetTools.m in Sources */,
@@ -353,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15D43EE61CC5CF6800E44A17 /* UIView+LayerSwitch.m in Sources */,
 				15D82C7B1C7AA8A700F4AA61 /* PYDialogTools.m in Sources */,
 				15E164131C50B69F00C6A842 /* UIView+Dialog.m in Sources */,
 				15E1640D1C50A64300C6A842 /* UIView+Remove.m in Sources */,

@@ -11,6 +11,7 @@
 #import "UIView+Remove.h"
 #import "UIView+Popup.h"
 #import "UIView+Dialog.h"
+#import "UIView+LayerSwitch.h"
 
 #import "PYDialogTools.h"
 #import "PYPopupTools.h"

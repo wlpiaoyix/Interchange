@@ -8,6 +8,7 @@
 
 #import "UIView+Popup.h"
 #import "UIView+Remove.h"
+#import "UIView+LayerSwitch.h"
 #import <Utile/EXTScope.h>
 #import <Utile/PYViewAutolayoutCenter.h>
 #import <Utile/PYUtile.h>
@@ -80,8 +81,7 @@ static const NSString *OffsetOrgin_Y = @"Y";
             self.mantleView = mantle;
         }
         self.isShow = true;
-        self.moveable = false;
-        self.mantleView.moveable = true;
+        self.showView.moveable = true;
         
         @weakify(self)
         static dispatch_once_t predicate;
@@ -113,7 +113,8 @@ static const NSString *OffsetOrgin_Y = @"Y";
         [self.mantleView addSubview:showView];
         if ([self.mantleView isKindOfClass:[PYMantleView class]]) {
             [self.mantleView removeFromSuperview];
-            [[UIApplication sharedApplication].keyWindow addSubview:self.mantleView];
+            [[UIApplication sharedApplication].delegate.window addSubview:self.mantleView];
+           self.mantleView.layerSwitchToFront = YES;
         }
         
         [self setOffsetSize:self.showView.frame.size];
@@ -135,8 +136,9 @@ static const NSString *OffsetOrgin_Y = @"Y";
         if (!showView) {
             return;
         }
-        
-        [self setIsShow:false];
+        @synchronized (self) {
+            [self setIsShow:false];
+        }
         
         [self reSetCenter];
         
@@ -252,54 +254,37 @@ static const NSString *OffsetOrgin_Y = @"Y";
             CATransform3D transformx = CATransform3DIdentity;
             transformx = CATransform3DScale(transformx, 0, 0, 1);
             [view showView].layer.transform = transformx;
-            [view mantleView].alpha = 0;
+            [view showView].alpha = 0;
+            if ([[view mantleView] isKindOfClass:[PYMantleView class]]) {
+                [view mantleView].alpha = 0;
+            }
         }
+        
+        view.isAnimationing = true;
         @unsafeify(view);
         @unsafeify(_blockEnd_);
-        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [UIView animateWithDuration:PYPopupAnimationTime * PYPopupAnimationTimeOffset animations:^{
             @strongify(view);
-            @strongify(_blockEnd_);
-            
-            @synchronized(view) {
-                
-                view.isAnimationing = true;
-                NSUInteger num = PYPopupAnimationTime;
-                while (num) {
-                    if ([view isShow] == true) {
-                        num--;
-                        __block CGFloat value = (CGFloat)num/PYPopupAnimationTime;
-                        value = 1 - value*value*value;
-                        @unsafeify(view);
-                        dispatch_barrier_async(dispatch_get_main_queue(), ^{
-                            @strongify(view);
-                            CATransform3D transformx = CATransform3DIdentity;
-                            transformx = CATransform3DScale(transformx, value, value, 1);
-                            [view showView].layer.transform = transformx;
-                            [view showView].alpha = value;
-                            if ([[view mantleView] isKindOfClass:[PYMantleView class]]) {
-                                [view mantleView].alpha = value;
-                            }
-                        });
-                        [NSThread sleepForTimeInterval:PYPopupAnimationTimeOffset];
-                    }else{
-                        num = 0;
-                    }
-                }
-                view.isAnimationing = false;
+            CATransform3D transformx = CATransform3DIdentity;
+            transformx = CATransform3DScale(transformx, 1, 1, 1);
+            [view showView].layer.transform = transformx;
+            [view showView].alpha = 1;
+            if ([[view mantleView] isKindOfClass:[PYMantleView class]]) {
+                [view mantleView].alpha = 1;
             }
             
-            @unsafeify(view);
-            @unsafeify(_blockEnd_);
-            dispatch_barrier_async(dispatch_get_main_queue(), ^{
-                @strongify(_blockEnd_);
-                @strongify(view);
-                
-                if (!view) return;
-                @synchronized(view) {
-                    if(_blockEnd_)_blockEnd_(view);
-                }
-            });
-        });
+        } completion:^(BOOL finished) {
+            @strongify(_blockEnd_);
+            @strongify(view);
+            
+            view.isAnimationing = false;
+            
+            if (!view) return;
+            @synchronized(view) {
+                if(_blockEnd_)_blockEnd_(view);
+            }
+        }];
+        
     };
     return blockAnimation;
 }
@@ -326,55 +311,37 @@ static const NSString *OffsetOrgin_Y = @"Y";
             CATransform3D transformx = CATransform3DIdentity;
             transformx = CATransform3DScale(transformx, 1, 1, 1);
             [view showView].layer.transform = transformx;
-            [view mantleView].alpha = 1;
-            
+            [view showView].alpha = 1;
+            if ([[view mantleView] isKindOfClass:[PYMantleView class]]) {
+                [view mantleView].alpha = 1;
+            }
         }
         
+        
+        view.isAnimationing = true;
         @unsafeify(view);
         @unsafeify(_blockEnd_);
-        dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            @synchronized(view) {
-                view.isAnimationing = true;
-                
-                NSUInteger num = PYPopupAnimationTime;
-                @strongify(view);
-                @strongify(_blockEnd_);
-                while (num) {
-                    num--;
-                    if ([view isShow] == false) {
-                        __block CGFloat value = (CGFloat)num/PYPopupAnimationTime;
-                        value = value*value*value;
-                        @unsafeify(view);
-                        dispatch_barrier_async(dispatch_get_main_queue(), ^{
-                            @strongify(view);
-                            CATransform3D transformx = CATransform3DIdentity;
-                            transformx = CATransform3DScale(transformx, value, value, 1);
-                            [view showView].layer.transform = transformx;
-                            if ([[view mantleView] isKindOfClass:[PYMantleView class]]) {
-                                view.mantleView.alpha = value;
-                            }
-                        });
-                        [NSThread sleepForTimeInterval:PYPopupAnimationTimeOffset];
-                    }else{
-                        num = 0;
-                    }
-                    view.isAnimationing = false;
-                }
-                
-                @unsafeify(view);
-                @unsafeify(_blockEnd_);
-                dispatch_barrier_async(dispatch_get_main_queue(), ^{
-                    @strongify(_blockEnd_);
-                    @strongify(view);
-                    
-                    if (!view) return;
-                    
-                    @synchronized(view) {
-                        if(_blockEnd_)_blockEnd_(view);
-                    }
-                });
+        [UIView animateWithDuration:PYPopupAnimationTime * PYPopupAnimationTimeOffset animations:^{
+            @strongify(view);
+            CATransform3D transformx = CATransform3DIdentity;
+            transformx = CATransform3DScale(transformx, 0, 0, 1);
+            [view showView].layer.transform = transformx;
+            [view showView].alpha = 0;
+            if ([[view mantleView] isKindOfClass:[PYMantleView class]]) {
+                [view mantleView].alpha = 0;
             }
-        });
+            
+        } completion:^(BOOL finished) {
+            @strongify(_blockEnd_);
+            @strongify(view);
+            
+            view.isAnimationing = false;
+            
+            if (!view) return;
+            @synchronized(view) {
+                if(_blockEnd_)_blockEnd_(view);
+            }
+        }];
         
     };
     

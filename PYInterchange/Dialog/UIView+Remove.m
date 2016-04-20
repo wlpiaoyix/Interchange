@@ -11,7 +11,6 @@
 #import <Utile/EXTScope.h>
 #import <objc/runtime.h>
 
-static const void *UIViewTouchesRemoveTarget = &UIViewTouchesRemoveTarget;
 static const void *UIViewTouchesEnable = &UIViewTouchesEnable;
 
 static const void *Dicscrollenabled_Pointer = &Dicscrollenabled_Pointer;
