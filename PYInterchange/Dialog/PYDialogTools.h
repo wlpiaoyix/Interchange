@@ -15,7 +15,6 @@
 @interface PYDialogTools : NSObject
 //==>标题
 +(void) setTitle:(nonnull NSString*) title targetView:(nonnull UIView*) targetView;
-+(void) setTitleFont:(nonnull UIFont*) font targetView:(nonnull UIView*) targetView;
 +(void) setBlockTitleStyle:(void (^_Nullable)(UIView * _Nullable titleView)) blockTitleStyle targetView:(nonnull UIView*) targetView;
 //<==
 /**

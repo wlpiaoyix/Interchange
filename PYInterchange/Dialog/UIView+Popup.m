@@ -72,7 +72,7 @@ static const NSString *OffsetOrgin_Y = @"Y";
         
         UIView *showView = self.showView;
         
-        if ([showView isShow]) return;
+        if (showView.isShow) return;
         
         if (!self.mantleView) {
             PYMantleView *mantle = [PYMantleView new];
@@ -137,7 +137,10 @@ static const NSString *OffsetOrgin_Y = @"Y";
             return;
         }
         @synchronized (self) {
-            [self setIsShow:false];
+            if (!self.isShow) {
+                return;
+            }
+            self.isShow = false;
         }
         
         [self reSetCenter];
@@ -349,7 +352,7 @@ static const NSString *OffsetOrgin_Y = @"Y";
 }
 +(BlockPopupEndAnmation) __creteDefaultBlcokPopupHiddenEndAnmation{
     BlockPopupEndAnmation blockEnd = ^(UIView * view){
-        if ([view isShow] == false) {
+        if (view.isShow == false) {
             UIView *showView = [view showView];
             UIView *mantleView = [view mantleView];
             [showView removeFromSuperview];

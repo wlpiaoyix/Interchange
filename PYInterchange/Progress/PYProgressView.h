@@ -19,4 +19,6 @@ extern CGFloat MAXPYProgressMessageSpace;
 @property (nonatomic, strong, nonnull) NSAttributedString * textProgress;
 @property (nonatomic, strong, nullable) UIView * viewProgress;
 @property (nonatomic, copy, nullable) void (^blockCancel)(PYProgressView * _Nonnull target);
+-(void) progressShow;
+-(void) progressHidden;
 @end

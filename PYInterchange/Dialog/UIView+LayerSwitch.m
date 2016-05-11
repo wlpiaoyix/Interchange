@@ -26,6 +26,11 @@ static NSHashTable<UIView *> * HashTableUIViewLayerSwitch;
             [HashTableUIViewLayerSwitch removeObject:self];
         }
     }
+    
+    if (layerSwitchToFront) {
+        [self.superview bringSubviewToFront:self];
+    }
+    
     objc_setAssociatedObject(self, UIViewLayerSwitchToFrontPointer, @(layerSwitchToFront), OBJC_ASSOCIATION_RETAIN);
 }
 -(BOOL) layerSwitchToFront{
@@ -46,6 +51,11 @@ static NSHashTable<UIView *> * HashTableUIViewLayerSwitch;
             [HashTableUIViewLayerSwitch removeObject:self];
         }
     }
+    
+    if (layerSwitchToBack) {
+        [self.superview sendSubviewToBack:self];
+    }
+    
     objc_setAssociatedObject(self, UIViewLayerSwitchToBackPointer, @(layerSwitchToBack), OBJC_ASSOCIATION_RETAIN);
 }
 -(BOOL) layerSwitchToBack{

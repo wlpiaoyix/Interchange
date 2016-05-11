@@ -10,6 +10,7 @@
 #import "PYProgressView.h"
 #import "PYPopupTools.h"
 #import "UIView+Popup.h"
+#import "UIView+Dialog.h"
 #import <Utile/UIView+Expand.h>
 
 
@@ -29,22 +30,13 @@
     
     [progressView setCornerRadiusAndBorder:1 borderWidth:1 borderColor:[UIColor redColor]];
     [progressView popupShow];
-    self.progressView = progressView;
-    //  后台执行：
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        
-        [NSThread sleepForTimeInterval:3.0f];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            UIView *view = [UIView new];
-            view.frame = CGRectMake(0, 0, 320, 580);
-            view.backgroundColor = [UIColor blueColor];
-            [[UIApplication sharedApplication].keyWindow addSubview:view];
-        });
-        [NSThread sleepForTimeInterval:4.0f];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.progressView popupHidden];
-        });
-    });
+    progressView.dialogTitle = @"你猜";
+    progressView.dialogMessage = @"我去，打开一个应用";
+    [progressView dialogShowWithBlock:^(UIView * _Nonnull view, NSUInteger index) {
+        [view dialogHidden];
+        NSString *sUrl = [NSString stringWithFormat:@"sme://login"];///A0VbYC7Si7yvfYnJuTpHl5+r2RW9aPXsIP+eDbVI1h4iM2IgX91o4K7/4HuA+pzWB73D1e1b9bYOxsLkHT3NKuDfzQvVT9wk8tNOuwU+SEo=
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:sUrl]];
+    } buttonNames:@[@"确定"]];
     
 }
 - (IBAction)onclickNextView:(id)sender {
@@ -54,9 +46,9 @@
     view.frameSize = CGSizeMake(150, 50);
 //    pv.viewProgress = view;
     pv.textProgress = [[NSAttributedString alloc] initWithString:@"请稍后请稍后请稍后请稍后请..."];
-    [pv popupShow];
+    [pv progressShow];
     [pv setBlockCancel:^(PYProgressView * _Nonnull pv) {
-        [pv popupHidden];
+        [pv progressHidden];
     }];
 }
 

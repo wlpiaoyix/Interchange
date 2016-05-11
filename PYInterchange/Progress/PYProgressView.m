@@ -18,6 +18,7 @@
 #import <Utile/UIImage+Expand.h>
 #import <Utile/PYGraphicsDraw.h>
 #import <Utile/PYUtile.h>
+#import "UIView+Popup.h"
 
 static NSTimer * PYPogressTimer;
 static NSHashTable<PYProgressView *> * HashTablePYProgressView;
@@ -27,7 +28,7 @@ CGFloat MAXPYProgressViewHeight = 300;
 CGFloat MINPYProgressViewWith = 80;
 CGFloat MINPYProgressViewHeight = 40;
 CGFloat MAXPYProgressMessageSpace = 10;
-CGFloat MAXPYProgressBorderWidth = 4;
+CGFloat MAXPYProgressBorderWidth = 10;
 
 UIImage * UIImagePYProgressButtonCancelNormal;
 UIImage * UIImagePYProgressButtonCancelHighlight;
@@ -54,20 +55,22 @@ UIImage * UIImagePYProgressButtonCancelHighlight;
         HashTablePYProgressView=[NSHashTable<PYProgressView *> weakObjectsHashTable];
         PYPogressTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(GraphicsProgressLayer) userInfo:nil repeats:YES];
         [PYPogressTimer fire];
-        CGFloat width = MAXPYProgressBorderWidth * 8;
+        CGFloat width = MAXPYProgressBorderWidth * 2;
         UIImagePYProgressButtonCancelNormal = [UIImage imageWithSize:CGSizeMake(width * 2, width * 2) blockDraw:^(CGContextRef  _Nonnull context, CGRect rect) {
             UIColor * strokeColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.4];
-            UIColor * fillColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.4];
+            UIColor * fillColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.3];
+            UIColor * borderColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.6];
             
             CGFloat borderW = width / 4;
-            [PYGraphicsDraw drawCircleWithContext:context pointCenter:CGPointMake(width, width) radius:width - borderW / 2 strokeColor:strokeColor.CGColor fillColor:fillColor.CGColor strokeWidth:borderW startDegree:0 endDegree:-0.001];
+            [PYGraphicsDraw drawCircleWithContext:context pointCenter:CGPointMake(width, width) radius:width - borderW / 2 strokeColor:borderColor.CGColor fillColor:[UIColor clearColor].CGColor strokeWidth:borderW startDegree:0 endDegree:-0.001];
+            [PYGraphicsDraw drawCircleWithContext:context pointCenter:CGPointMake(width, width) radius:width - borderW / 2 strokeColor:strokeColor.CGColor fillColor:fillColor.CGColor strokeWidth:borderW / 2 startDegree:0 endDegree:-0.001];
             
             CGFloat xw = cos(parseRadiansToDegrees(45)) * (width- borderW) * 2 / 3;
             CGFloat yw = sin(parseRadiansToDegrees(45)) * (width- borderW)  * 2 / 3;
             
             
-            [PYGraphicsDraw drawLineWithContext:context startPoint:CGPointMake(width - xw , width - yw) endPoint:CGPointMake(width  + xw , width + yw) strokeColor:[UIColor whiteColor].CGColor strokeWidth:borderW * 2 lengthPointer:nil length:0];
-            [PYGraphicsDraw drawLineWithContext:context startPoint:CGPointMake(width + xw, width - yw) endPoint:CGPointMake(width - xw, width + yw) strokeColor:[UIColor whiteColor].CGColor strokeWidth:borderW * 2 lengthPointer:nil length:0];
+            [PYGraphicsDraw drawLineWithContext:context startPoint:CGPointMake(width - xw , width - yw) endPoint:CGPointMake(width  + xw , width + yw) strokeColor:borderColor.CGColor strokeWidth:borderW * 2 lengthPointer:nil length:0];
+            [PYGraphicsDraw drawLineWithContext:context startPoint:CGPointMake(width + xw, width - yw) endPoint:CGPointMake(width - xw, width + yw) strokeColor:borderColor.CGColor strokeWidth:borderW * 2 lengthPointer:nil length:0];
             [PYGraphicsDraw drawLineWithContext:context startPoint:CGPointMake(width - xw , width - yw) endPoint:CGPointMake(width  + xw , width + yw) strokeColor:strokeColor.CGColor strokeWidth:borderW lengthPointer:nil length:0];
             [PYGraphicsDraw drawLineWithContext:context startPoint:CGPointMake(width + xw, width - yw) endPoint:CGPointMake(width - xw, width + yw) strokeColor:strokeColor.CGColor strokeWidth:borderW lengthPointer:nil length:0];
         }];
@@ -129,7 +132,7 @@ UIImage * UIImagePYProgressButtonCancelHighlight;
     [self.buttonCancel setImage:UIImagePYProgressButtonCancelHighlight forState:UIControlStateHighlighted];
     [self addSubview:self.buttonCancel];
     [PYViewAutolayoutCenter persistConstraint:self.buttonCancel relationmargins:UIEdgeInsetsMake(0, DisableConstrainsValueMAX, DisableConstrainsValueMAX, 0) relationToItems:PYEdgeInsetsItemNull()];
-    [PYViewAutolayoutCenter persistConstraint:self.buttonCancel size:CGSizeMake(MAXPYProgressBorderWidth * 4, MAXPYProgressBorderWidth * 4)];
+    [PYViewAutolayoutCenter persistConstraint:self.buttonCancel size:CGSizeMake(MAXPYProgressBorderWidth * 2, MAXPYProgressBorderWidth * 2)];
     [self.buttonCancel addTarget:self action:@selector(onclickCancel) forControlEvents:UIControlEventTouchUpInside];
     [self.buttonCancel setHidden:YES];
     
@@ -230,6 +233,13 @@ UIImage * UIImagePYProgressButtonCancelHighlight;
     
     self.textProgress = self.textProgress;
 }
+
+-(void) progressShow{
+    [self popupShow];
+}
+-(void) progressHidden{
+    [self popupHidden];
+}
 -(void) setBlockCancel:(void (^)(PYProgressView * _Nonnull))blockCancel{
     _blockCancel = blockCancel;
     self.buttonCancel.hidden = self.blockCancel ? NO : YES;
@@ -237,6 +247,7 @@ UIImage * UIImagePYProgressButtonCancelHighlight;
 -(void) onclickCancel{
     if (self.blockCancel) {
         self.blockCancel(self);
+        [self progressHidden];
     }
 }
 -(void) dealloc{

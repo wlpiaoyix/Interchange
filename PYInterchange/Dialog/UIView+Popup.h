@@ -15,9 +15,9 @@ extern CGFloat PYPopupAnimationTime;
  */
 @interface UIView(Popup)
 //是否正在进行动画
-@property (nonatomic) BOOL isAnimationing;
+@property (nonatomic, readonly) BOOL isAnimationing;
 //是否显示了
-@property (nonatomic) BOOL isShow;
+@property (nonatomic, readonly) BOOL isShow;
 //显示靠近中心的偏移量
 @property (nonatomic) CGPoint centerPoint;
 //显示框的大小

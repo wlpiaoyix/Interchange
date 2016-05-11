@@ -15,11 +15,8 @@
 +(void) setTitle:(nonnull NSString*) title targetView:(nonnull UIView*) targetView{
     [targetView setDialogTitle:title];
 }
-+(void) setTitleFont:(nonnull UIFont*) font targetView:(nonnull UIView*) targetView{
-    [targetView setDialogTitleFont:font];
-}
 +(void) setMessage:(nonnull NSString*) message blockStyle:(void (^) (NSMutableAttributedString* attArg)) blockStyle targetView:(nonnull UIView*) targetView{
-    [targetView setDialogMessage:message blockStyle:blockStyle];
+    targetView.dialogMessage = message;
 }
 +(void) setBlockButtonCreate:(UIButton * _Nonnull (^_Nullable)(NSUInteger index)) blockButtonCreate targetView:(nonnull UIView*) targetView{
     [targetView setBlockButtonCreate:blockButtonCreate];
