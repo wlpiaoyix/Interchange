@@ -20,6 +20,3 @@ extern CGFloat DialogFrameWith;
 typedef void(^BlockDialogOpt)(UIView * _Nonnull view, NSUInteger index);
 
 
-@interface PYPopupParams : UIView
-
-@end

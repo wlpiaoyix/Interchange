@@ -30,6 +30,10 @@ extern const NSString * _Nonnull PYColorMatrixCIVignetteEffect;
 +(UIImage * _Nonnull) imageWithColor:(UIColor * _Nonnull)color;
 +(UIImage * _Nonnull)imageWithSize:(CGSize) size color:(CGColorRef _Nonnull) colorRef;
 +(UIImage * _Nonnull)imageWithSize:(CGSize) size blockDraw:(void (^ _Nonnull) (CGContextRef _Nonnull context, CGRect rect)) blockDraw;
+/**
+ 二维码
+ */
++(UIImage * _Nonnull) imageWithQRCode:(NSString * _Nonnull) QRCode size:(CGFloat) size;
 /*滤镜功能*/
 +(UIImage * _Nonnull) imageWithImage:(UIImage * _Nonnull)inImage colorMatrix:(NSString * _Nonnull) colorMatrix;
 +(UIImage * _Nonnull) imageWithImage:(UIImage * _Nonnull)inImage colorMatrix:(NSString * _Nonnull) colorMatrix rectMatrix:(CGRect) rectMatrix;

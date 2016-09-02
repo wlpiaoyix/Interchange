@@ -9,15 +9,15 @@
 #import <UIKit/UIKit.h>
 
 #ifndef IOS7_OR_LATER
-#define IOS7_OR_LATER (!(NSFoundationVersionNumber < NSFoundationVersionNumber_iOS_7_0))
+#define IOS7_OR_LATER (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_7_0)
 #endif
 
 #ifndef IOS8_OR_LATER
-#define IOS8_OR_LATER (!(NSFoundationVersionNumber < NSFoundationVersionNumber_iOS_8_0))
+#define IOS8_OR_LATER (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_8_0)
 #endif
 
 #ifndef IOS9_OR_LATER
-#define IOS9_OR_LATER ((NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_8_4))
+#define IOS9_OR_LATER (NSFoundationVersionNumber >= 1200.00f)
 #endif
 
 #ifndef RGB
@@ -54,6 +54,9 @@ float appWidth();
 float appHeight();
 //<==
 
+UIDeviceOrientation parseInterfaceOrientationToDeviceOrientation(UIInterfaceOrientation interfaceOrientation);
+UIInterfaceOrientation parseDeviceOrientationToInterfaceOrientation(UIDeviceOrientation deviceOrientation);
+
 //==>角度和弧度之间的转换
 double parseDegreesToRadians(double degrees);
 double parseRadiansToDegrees(double radians);
@@ -62,6 +65,10 @@ double parseRadiansToDegrees(double radians);
  经纬度转换距离 (KM)
  */
 double parseCoordinateToDistance(double lat1, double lng1, double lat2, double lng2);
+/**
+ 生成UUID
+ */
+NSString * _Nullable PYUUID(NSUInteger length);
 /**
  cup使用率
  */
@@ -93,6 +100,7 @@ float cpu_usage();
  */
 +(CGFloat) getFontSizeWithHeight:(CGFloat) height fontName:(nonnull NSString *) fontName;
 //<==
+
 
 /**
  汉字转拼音

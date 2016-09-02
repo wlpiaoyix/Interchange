@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "15632B771C4CBCFE006D3B09"
+               BlueprintIdentifier = "155F44AB1CEB149700FD22EF"
                BuildableName = "PYInterchange.app"
                BlueprintName = "PYInterchange"
                ReferencedContainer = "container:PYInterchange.xcodeproj">
@@ -28,11 +28,41 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "155F44C71CEB149800FD22EF"
+               BuildableName = "PYInterchangeTests.xctest"
+               BlueprintName = "PYInterchangeTests"
+               ReferencedContainer = "container:PYInterchange.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "155F44D21CEB149800FD22EF"
+               BuildableName = "PYInterchangeUITests.xctest"
+               BlueprintName = "PYInterchangeUITests"
+               ReferencedContainer = "container:PYInterchange.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "15E407161D2F942500EF1E5A"
+               BuildableName = "PYInterchange.frameworkTests.xctest"
+               BlueprintName = "PYInterchange.frameworkTests"
+               ReferencedContainer = "container:PYInterchange.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "15632B771C4CBCFE006D3B09"
+            BlueprintIdentifier = "155F44AB1CEB149700FD22EF"
             BuildableName = "PYInterchange.app"
             BlueprintName = "PYInterchange"
             ReferencedContainer = "container:PYInterchange.xcodeproj">
@@ -55,7 +85,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "15632B771C4CBCFE006D3B09"
+            BlueprintIdentifier = "155F44AB1CEB149700FD22EF"
             BuildableName = "PYInterchange.app"
             BlueprintName = "PYInterchange"
             ReferencedContainer = "container:PYInterchange.xcodeproj">
@@ -74,7 +104,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "15632B771C4CBCFE006D3B09"
+            BlueprintIdentifier = "155F44AB1CEB149700FD22EF"
             BuildableName = "PYInterchange.app"
             BlueprintName = "PYInterchange"
             ReferencedContainer = "container:PYInterchange.xcodeproj">

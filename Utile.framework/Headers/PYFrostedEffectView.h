@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PYFrostedEffectView : UIView
+@property (nonatomic, assign, nullable) UIView * viewTarget;
 @property (nonatomic) CGFloat effectValue;
-@property (nonnull, nonatomic,copy) UIColor * effectColor;
--(void) refreshForstedEffect;
-
+-(void) refreshImage;
 @end

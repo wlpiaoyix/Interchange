@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/EXTScope.h</key>
 		<data>
-		iUP/un33gWebXeBVIVItvq0Idt8=
+		dNmTMi97wp3eQgpR9Wb4ZrQLfCc=
 		</data>
 		<key>Headers/NSArray+Expand.h</key>
 		<data>
@@ -32,13 +32,17 @@
 		<data>
 		tO+fr4o3Gx6BUVHh4NfA7izBgTg=
 		</data>
+		<key>Headers/NSObject+Hook.h</key>
+		<data>
+		MTWqRXw1xN4RgxlCTYfvTgSzLOQ=
+		</data>
 		<key>Headers/NSString+Expand.h</key>
 		<data>
-		rncicOY68dcfBYAvnynU3vLaXCg=
+		DEl7Y1zBC9V1U/zmMjXmsGSJKK0=
 		</data>
 		<key>Headers/PYFrostedEffectView.h</key>
 		<data>
-		LVdHYCsGBJWtynluxPstzUx5juA=
+		/ZLR5ajnpaqgN8uKX6qxDRs2lXQ=
 		</data>
 		<key>Headers/PYGraphicsDraw.h</key>
 		<data>
@@ -62,7 +66,7 @@
 		</data>
 		<key>Headers/PYOrientationListener.h</key>
 		<data>
-		8Viuo14XK/rulcbyGk3fzV0K80U=
+		Ak8QO5Ntm9gMqV+Al7QEJAaaHDw=
 		</data>
 		<key>Headers/PYReachabilityListener.h</key>
 		<data>
@@ -78,7 +82,7 @@
 		</data>
 		<key>Headers/PYUtile.h</key>
 		<data>
-		TONmVh9hc6YM4XMLkhQd2KEJZDs=
+		2jq/m5pLosuIKN/eL4HG6/cd4NE=
 		</data>
 		<key>Headers/PYViewAutolayoutCenter.h</key>
 		<data>
@@ -94,7 +98,7 @@
 		</data>
 		<key>Headers/UIImage+Expand.h</key>
 		<data>
-		KgueLghEU7Twu/hliScOsFekc9M=
+		ovm4mL/xgwWMhrluVHGqc+Gy/Mc=
 		</data>
 		<key>Headers/UILable+Expand.h</key>
 		<data>
@@ -102,11 +106,23 @@
 		</data>
 		<key>Headers/UIView+Expand.h</key>
 		<data>
-		vR+ar2CzCTOiXirh8zv2QrSb2NE=
+		lLzR3o0BMgxgZt1sw5QtIxpZkd4=
+		</data>
+		<key>Headers/UIViewController+Hook.h</key>
+		<data>
+		DNR5FzSgBOTEYEjqnrRB6P4Nrxo=
+		</data>
+		<key>Headers/UIViewController+HookOrientation.h</key>
+		<data>
+		YYYXGg8Ja2d1MBUNvdoxpetQ0cs=
+		</data>
+		<key>Headers/UIViewController+HookView.h</key>
+		<data>
+		1lhh9ZPNu0McRplaxqBhKYs4Mfo=
 		</data>
 		<key>Headers/Utile.Framework.h</key>
 		<data>
-		U9IlgSu0ThJTglzjbNV9ebCxwdg=
+		xC5jTqkP8TzSk6EZKTwMluJ/nuU=
 		</data>
 		<key>Headers/metamacros.h</key>
 		<data>
@@ -114,119 +130,352 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		0lQs8LDFC6tKcsLFCmZCheqOg4Q=
+		TjusoLjh6jx55MmBB5emN/iiIpg=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
 		<key>Headers/EXTScope.h</key>
-		<data>
-		iUP/un33gWebXeBVIVItvq0Idt8=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			dNmTMi97wp3eQgpR9Wb4ZrQLfCc=
+			</data>
+			<key>hash2</key>
+			<data>
+			41MT4izW/5aRKzMjpPPiXsUxgS6IwXUPDPI6kjnIuiY=
+			</data>
+		</dict>
 		<key>Headers/NSArray+Expand.h</key>
-		<data>
-		hQn9EO3fU45fGoOei08p/4PW20I=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			hQn9EO3fU45fGoOei08p/4PW20I=
+			</data>
+			<key>hash2</key>
+			<data>
+			3duKNIwLmWwWnjLlNAoiFvBr81GbopX4bXPPJUrSS3g=
+			</data>
+		</dict>
 		<key>Headers/NSData+Expand.h</key>
-		<data>
-		OVShxI4XGmOgXW4u921PWnYgdDk=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			OVShxI4XGmOgXW4u921PWnYgdDk=
+			</data>
+			<key>hash2</key>
+			<data>
+			tSTWWLA80VdKRyYazdJGsBJNcwTpNfzNRUwawb85QoI=
+			</data>
+		</dict>
 		<key>Headers/NSDate+Expand.h</key>
-		<data>
-		9Ke9uVKjaw7nCKxcOlNvZY778wE=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			9Ke9uVKjaw7nCKxcOlNvZY778wE=
+			</data>
+			<key>hash2</key>
+			<data>
+			gDFaxIpxLS5V61X83lYvFzt82tntwM6Gqf9WDxcc3IQ=
+			</data>
+		</dict>
 		<key>Headers/NSDictionary+Expand.h</key>
-		<data>
-		/0nUKoH1R8a1F+z0zSGscuStCcg=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			/0nUKoH1R8a1F+z0zSGscuStCcg=
+			</data>
+			<key>hash2</key>
+			<data>
+			rmHx/6kvdyisyEAYjTCcIzCzW5AvHYER6vhHMxl5B+4=
+			</data>
+		</dict>
 		<key>Headers/NSNumber+Expand.h</key>
-		<data>
-		dmdHBnJ+1A9dRy9Hm5uXxj3HdNQ=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			dmdHBnJ+1A9dRy9Hm5uXxj3HdNQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			4RDUb/aWkrSofvgn3g6+Fc7N4NGCbhCT86ALsmHo+UA=
+			</data>
+		</dict>
 		<key>Headers/NSObject+Expand.h</key>
-		<data>
-		tO+fr4o3Gx6BUVHh4NfA7izBgTg=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			tO+fr4o3Gx6BUVHh4NfA7izBgTg=
+			</data>
+			<key>hash2</key>
+			<data>
+			bBEM37XNLitzgib4irNtRPcJno8LagI5UD1fQB0cops=
+			</data>
+		</dict>
+		<key>Headers/NSObject+Hook.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			MTWqRXw1xN4RgxlCTYfvTgSzLOQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			XcDEErVwRFgZsuuElbw2F6PMZ/bcMh8gl/tdeq7w/0c=
+			</data>
+		</dict>
 		<key>Headers/NSString+Expand.h</key>
-		<data>
-		rncicOY68dcfBYAvnynU3vLaXCg=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			DEl7Y1zBC9V1U/zmMjXmsGSJKK0=
+			</data>
+			<key>hash2</key>
+			<data>
+			G5srhrb05t72Y6syFpGD2mMpT78wi8zm6wTu2OMp754=
+			</data>
+		</dict>
 		<key>Headers/PYFrostedEffectView.h</key>
-		<data>
-		LVdHYCsGBJWtynluxPstzUx5juA=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			/ZLR5ajnpaqgN8uKX6qxDRs2lXQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			8ntVl9Q/CA+zhDfCFezhK4e2oSLHFJDJ1CO1OYFYLfE=
+			</data>
+		</dict>
 		<key>Headers/PYGraphicsDraw.h</key>
-		<data>
-		i2V4Td6HL6JlfBuMitfWjyvAif4=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			i2V4Td6HL6JlfBuMitfWjyvAif4=
+			</data>
+			<key>hash2</key>
+			<data>
+			l9NWSBlGh5w02JNnrPHfNmbAMm8EGkOS1ItfIo7kK08=
+			</data>
+		</dict>
 		<key>Headers/PYGraphicsThumb.h</key>
-		<data>
-		H1XP62HLyHMKRQmPA532tqKj0LA=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			H1XP62HLyHMKRQmPA532tqKj0LA=
+			</data>
+			<key>hash2</key>
+			<data>
+			J6381kfO5pLMSXnElgjlVQO6c1lpBnUPqzRYje0Ty9Q=
+			</data>
+		</dict>
 		<key>Headers/PYHook.h</key>
-		<data>
-		svhDp6DZ+uR5nc3Gfzpln7rSJHs=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			svhDp6DZ+uR5nc3Gfzpln7rSJHs=
+			</data>
+			<key>hash2</key>
+			<data>
+			s44yUU9XKa6eajzV6IJJEr3zbtypIEEhBxqeLQnzNJk=
+			</data>
+		</dict>
 		<key>Headers/PYKeyboardNotification.h</key>
-		<data>
-		YQ8/I5YfhKV9xW/gPy4VkxKb67o=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			YQ8/I5YfhKV9xW/gPy4VkxKb67o=
+			</data>
+			<key>hash2</key>
+			<data>
+			F2DFeCVk7y2+Z1UViRHD1id6oCM4DtOtaZ25t6VHbO0=
+			</data>
+		</dict>
 		<key>Headers/PYMotionListener.h</key>
-		<data>
-		Kym+l9mkf5pdKKJuN8JH7kaOMmw=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			Kym+l9mkf5pdKKJuN8JH7kaOMmw=
+			</data>
+			<key>hash2</key>
+			<data>
+			Pp1BfQT24ezzfzYBLzNjg9gBMKulq6RF5Kx0ysJmq/k=
+			</data>
+		</dict>
 		<key>Headers/PYOrientationListener.h</key>
-		<data>
-		8Viuo14XK/rulcbyGk3fzV0K80U=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			Ak8QO5Ntm9gMqV+Al7QEJAaaHDw=
+			</data>
+			<key>hash2</key>
+			<data>
+			xXKAPDlSAkiKVU4BOjbWy/CpRIfBACjuMJ8zGrkfoco=
+			</data>
+		</dict>
 		<key>Headers/PYReachabilityListener.h</key>
-		<data>
-		LQK6K3/GU8eKH+659brbC9XEXik=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			LQK6K3/GU8eKH+659brbC9XEXik=
+			</data>
+			<key>hash2</key>
+			<data>
+			8fjlUu7FYRsOC9UyIGOCU34Qxh8dvaeiCAN//SPCxEg=
+			</data>
+		</dict>
 		<key>Headers/PYReflect.h</key>
-		<data>
-		MxbbV0KNlOn45mkh1kkoBuka9iE=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			MxbbV0KNlOn45mkh1kkoBuka9iE=
+			</data>
+			<key>hash2</key>
+			<data>
+			XgcrFep5sLgvh4nS7Famw3SnCPeF8Dd7ok5PUfFSgsE=
+			</data>
+		</dict>
 		<key>Headers/PYRegexPredicate.h</key>
-		<data>
-		x4RQg3uP0iYOqTghmPqigyJ6UOU=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			x4RQg3uP0iYOqTghmPqigyJ6UOU=
+			</data>
+			<key>hash2</key>
+			<data>
+			DH2nXil7onLBMOe8/3zcnIYXcNPzOqfM5YfZUPjPYMA=
+			</data>
+		</dict>
 		<key>Headers/PYUtile.h</key>
-		<data>
-		TONmVh9hc6YM4XMLkhQd2KEJZDs=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			2jq/m5pLosuIKN/eL4HG6/cd4NE=
+			</data>
+			<key>hash2</key>
+			<data>
+			o1rTOJVmo0fVUhS3LI9KKPY5B0pfrA8UtdMWp3Ua3pY=
+			</data>
+		</dict>
 		<key>Headers/PYViewAutolayoutCenter.h</key>
-		<data>
-		pZBuiWDZU9K6sQMTMfWozhvGswk=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			pZBuiWDZU9K6sQMTMfWozhvGswk=
+			</data>
+			<key>hash2</key>
+			<data>
+			C11F5o5Xex1g+hyMdoGN4p1KRzy2d4y884W9QaaAOQI=
+			</data>
+		</dict>
 		<key>Headers/Reachability.h</key>
-		<data>
-		jubvAXBEe2dY5dlU8pdU3HNtSVs=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			jubvAXBEe2dY5dlU8pdU3HNtSVs=
+			</data>
+			<key>hash2</key>
+			<data>
+			kwzWnjY6HlTaHm3FgEAQvEzcBhoq3dkUaV6EbpBiLBM=
+			</data>
+		</dict>
 		<key>Headers/UIColor+Expand.h</key>
-		<data>
-		V4VYMSKQq0f/VNhflXvohGDuJRs=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			V4VYMSKQq0f/VNhflXvohGDuJRs=
+			</data>
+			<key>hash2</key>
+			<data>
+			E0uO3ZDwfmeRp3PLf5tDvXY0klEZsXWOe7IjWSFrm0g=
+			</data>
+		</dict>
 		<key>Headers/UIImage+Expand.h</key>
-		<data>
-		KgueLghEU7Twu/hliScOsFekc9M=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			ovm4mL/xgwWMhrluVHGqc+Gy/Mc=
+			</data>
+			<key>hash2</key>
+			<data>
+			uNoUWaqV8ZzK+5rCyQY62GtkjqdQ3+XuP2hc89Mr8RQ=
+			</data>
+		</dict>
 		<key>Headers/UILable+Expand.h</key>
-		<data>
-		b5YWRE6nAHf5hgSm2Gg2hlMs+28=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			b5YWRE6nAHf5hgSm2Gg2hlMs+28=
+			</data>
+			<key>hash2</key>
+			<data>
+			pzH5jOD1t/CNC3WC2eD+rus1+nMaii/ZHeeUV7nqxCI=
+			</data>
+		</dict>
 		<key>Headers/UIView+Expand.h</key>
-		<data>
-		vR+ar2CzCTOiXirh8zv2QrSb2NE=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			lLzR3o0BMgxgZt1sw5QtIxpZkd4=
+			</data>
+			<key>hash2</key>
+			<data>
+			v4pg/GygZCARwCHBpdN7Hm4eJ6ddaYCrg74ruwK2ZbE=
+			</data>
+		</dict>
+		<key>Headers/UIViewController+Hook.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			DNR5FzSgBOTEYEjqnrRB6P4Nrxo=
+			</data>
+			<key>hash2</key>
+			<data>
+			oHQYrcfhEr+zWhZ9sXDSGLpVrAyoMeStbnvcBap4778=
+			</data>
+		</dict>
+		<key>Headers/UIViewController+HookOrientation.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			YYYXGg8Ja2d1MBUNvdoxpetQ0cs=
+			</data>
+			<key>hash2</key>
+			<data>
+			QHtK2KzI5Lz4fwV5Ss+qfesagMu3hHI876WYICJAQcc=
+			</data>
+		</dict>
+		<key>Headers/UIViewController+HookView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1lhh9ZPNu0McRplaxqBhKYs4Mfo=
+			</data>
+			<key>hash2</key>
+			<data>
+			6eGWLm/x8IXUbi33mwQuUHQQTjdBIpQh4YtRICkKPlU=
+			</data>
+		</dict>
 		<key>Headers/Utile.Framework.h</key>
-		<data>
-		U9IlgSu0ThJTglzjbNV9ebCxwdg=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			xC5jTqkP8TzSk6EZKTwMluJ/nuU=
+			</data>
+			<key>hash2</key>
+			<data>
+			ZjYaHRVMjNp7jyf9y3fV63AxoAqihgyXpa8J+F2nvVk=
+			</data>
+		</dict>
 		<key>Headers/metamacros.h</key>
-		<data>
-		/UCzmRZdtlxqZdIiubMLZeAL5oo=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			/UCzmRZdtlxqZdIiubMLZeAL5oo=
+			</data>
+			<key>hash2</key>
+			<data>
+			woZuhByGlpU1DSRGoXvfFNTGkSSvobL7ky23jPzEDxY=
+			</data>
+		</dict>
 	</dict>
 	<key>rules</key>
 	<dict>

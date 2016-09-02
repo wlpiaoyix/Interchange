@@ -18,16 +18,17 @@
 CGFloat PYPopupAnimationTime = 10.0;
 const CGFloat PYPopupAnimationTimeOffset = .05;
 
-static const void *UIViewAnimationingPointer = &UIViewAnimationingPointer;
-static const void *UIViewDisplayViewPointer = &UIViewDisplayViewPointer;
-static const void *UIViewMantlePointer = &UIViewMantlePointer;
-static const void *IsShowPointer = &IsShowPointer;
-static const void *OffsetSizePointer = &OffsetSizePointer;
-static const void *OffsetOrginPointer = &OffsetOrginPointer;
-static const void *BlockShowAnimationPointer = &BlockShowAnimationPointer;
-static const void *BlockEndShowAnimationPointer = &BlockEndShowAnimationPointer;
-static const void *BlockHiddenAnimationPointer = &BlockHiddenAnimationPointer;
-static const void *BlockEndHiddenAnimationPointer = &BlockEndHiddenAnimationPointer;
+static const void *UIViewPopupFramePointer = &UIViewPopupFramePointer;
+static const void *UIViewPopupAnimationingPointer = &UIViewPopupAnimationingPointer;
+static const void *UIViewPopupDisplayViewPointer = &UIViewPopupDisplayViewPointer;
+static const void *UIViewPopupMantlePointer = &UIViewPopupMantlePointer;
+static const void *UIViewPopupBasePointer = &UIViewPopupBasePointer;
+static const void *UIViewPopupIsShowPointer = &UIViewPopupIsShowPointer;
+static const void *UIViewPopupOffsetSizePointer = &UIViewPopupOffsetSizePointer;
+static const void *UIViewPopupOffsetOrginPointer = &UIViewPopupOffsetOrginPointer;
+static const void *UIViewPopupBlockShowAnimationPointer = &UIViewPopupBlockShowAnimationPointer;
+static const void *UIViewPopupBlockEndShowAnimationPointer = &UIViewPopupBlockEndShowAnimationPointer;
+static const void *UIViewPopupBlockHiddenAnimationPointer = &UIViewPopupBlockHiddenAnimationPointer;
 static const NSString *OffsetSize_W = @"W";
 static const NSString *OffsetSize_H = @"H";
 static const NSString *OffsetOrgin_X = @"X";
@@ -43,14 +44,37 @@ static const NSString *OffsetOrgin_Y = @"Y";
     [super removeFromSuperview];
 }
 @end
+@interface PYRect : NSObject
+@property (nonatomic) CGRect rect;
+@end
+@implementation PYRect
+
+-(instancetype) init{
+    if (self = [super init]) {
+        self.rect = CGRectMake(-1, -1, -1, -1);
+    }
+    return self;
+}
+
+@end
 
 @implementation UIView(Popup)
+-(CGRect) frameOrg{
+    PYRect * pyRect = objc_getAssociatedObject(self, UIViewPopupFramePointer);
+    return pyRect ? pyRect.rect : CGRectNull;
+}
+-(void) setFrameOrg:(CGRect) frame{
+    PYRect * pyRect = objc_getAssociatedObject(self, UIViewPopupFramePointer);
+    pyRect = pyRect ? pyRect : [PYRect new];
+    pyRect.rect = frame;
+    objc_setAssociatedObject(self, UIViewPopupFramePointer, pyRect, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
 -(BOOL) isAnimationing{
-    NSNumber *animationing = objc_getAssociatedObject(self, UIViewAnimationingPointer);
+    NSNumber *animationing = objc_getAssociatedObject(self, UIViewPopupAnimationingPointer);
     return animationing ? [animationing boolValue] : false;
 }
 -(void) setIsAnimationing:(BOOL)isAnimationing{
-    objc_setAssociatedObject(self, UIViewAnimationingPointer, @(isAnimationing), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, UIViewPopupAnimationingPointer, @(isAnimationing), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 -(void) _hooklayoutSubviews{
     
@@ -59,12 +83,16 @@ static const NSString *OffsetOrgin_Y = @"Y";
         if (!self.mantleView || self.isAnimationing) {
             return;
         }
-        
+        CGRect rectOrg = [self frameOrg];
+        if ((rectOrg.size.width == self.showView.bounds.size.width && rectOrg.size.height == self.showView.bounds.size.height)
+            && ([UIScreen mainScreen].bounds.size.width == self.mantleView.frame.size.width && [UIScreen mainScreen].bounds.size.height == self.mantleView.frame.size.height)) {
+            return;
+        }
+        [self setFrameOrg:self.showView.bounds];
         if(class_conformsToProtocol([self.mantleView class], @protocol(TagMantelViewHookLayout))){
             self.mantleView.frame = [UIScreen mainScreen].bounds;
             [self reSetCenter];
         }
-
     }
 }
 -(void) popupShow{
@@ -74,14 +102,19 @@ static const NSString *OffsetOrgin_Y = @"Y";
         
         if (showView.isShow) return;
         
+        self.isShow = true;
+        if (self.baseView == nil) {
+            self.baseView = [UIApplication sharedApplication].delegate.window;
+        }
+        
         if (!self.mantleView) {
             PYMantleView *mantle = [PYMantleView new];
-            mantle.frame = [UIScreen mainScreen].bounds;
+            mantle.frame = self.baseView.bounds;
             mantle.backgroundColor = [UIColor colorWithRed:0.1 green:0.1 blue:0.2 alpha:0.3];
+            [self.baseView addSubview:mantle];
             self.mantleView = mantle;
         }
-        self.isShow = true;
-        self.showView.moveable = true;
+        showView.moveable = true;
         
         @weakify(self)
         static dispatch_once_t predicate;
@@ -100,25 +133,22 @@ static const NSString *OffsetOrgin_Y = @"Y";
         
         [showView setBlockTouchEnd:^(CGPoint point, UIView *touchView) {
             @strongify(self);
-            
             @weakify(self);
             [UIView animateWithDuration:PYPopupAnimationTime * PYPopupAnimationTimeOffset animations:^{
                 @strongify(self);
                 [self reSetCenter];
             }];
-            
         }];
         
         [showView removeFromSuperview];
         [self.mantleView addSubview:showView];
         if ([self.mantleView isKindOfClass:[PYMantleView class]]) {
-            [self.mantleView removeFromSuperview];
-            [[UIApplication sharedApplication].delegate.window addSubview:self.mantleView];
            self.mantleView.layerSwitchToFront = YES;
         }
         
         [self setOffsetSize:self.showView.frame.size];
         [self reSetCenter];
+        [self setFrameOrg:self.showView.bounds];
         
         BlockPopupAnimation blockAnimation = [self blockShowAnimation];
         if (!blockAnimation) {
@@ -159,7 +189,7 @@ static const NSString *OffsetOrgin_Y = @"Y";
 }
 
 -(CGPoint) centerPoint{
-    NSDictionary *dict = objc_getAssociatedObject(self, OffsetOrginPointer);
+    NSDictionary *dict = objc_getAssociatedObject(self, UIViewPopupOffsetOrginPointer);
     if (!dict || !self.mantleView) {
         return CGPointMake(-9999, -9999);
     }
@@ -171,7 +201,7 @@ static const NSString *OffsetOrgin_Y = @"Y";
 
 -(void) setCenterPoint:(CGPoint)center{
     if (center.x <= -9998 || center.y <= -9998) {
-        objc_setAssociatedObject(self, OffsetOrginPointer, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        objc_setAssociatedObject(self, UIViewPopupOffsetOrginPointer, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         return;
     }
     CGSize size;
@@ -181,16 +211,16 @@ static const NSString *OffsetOrgin_Y = @"Y";
         size = [UIScreen mainScreen].bounds.size;
     }
     NSDictionary *dict = @{OffsetOrgin_X:[NSNumber numberWithFloat:center.x / size.width],OffsetOrgin_Y:[NSNumber numberWithFloat:center.y / size.height]};
-    objc_setAssociatedObject(self, OffsetOrginPointer, dict, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, UIViewPopupOffsetOrginPointer, dict, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 -(BOOL) isShow{
-    NSNumber *_isShow =  objc_getAssociatedObject(self, IsShowPointer);
+    NSNumber *_isShow =  objc_getAssociatedObject(self, UIViewPopupIsShowPointer);
     return _isShow ? _isShow.boolValue : false;
 }
 -(void) setIsShow:(BOOL) isShow{
     NSNumber *number = [NSNumber numberWithFloat:isShow];
-    objc_setAssociatedObject(self, IsShowPointer, number, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(self, UIViewPopupIsShowPointer, number, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 -(void) reSetCenter{
     @synchronized(self) {
@@ -210,14 +240,20 @@ static const NSString *OffsetOrgin_Y = @"Y";
         self.showView.frame = r;
     }
 }
+-(UIView*) baseView{
+    return objc_getAssociatedObject(self, UIViewPopupBasePointer);
+}
+-(void) setBaseView:(UIView*) baseView{
+    objc_setAssociatedObject(self, UIViewPopupBasePointer, baseView, OBJC_ASSOCIATION_ASSIGN);
+}
 -(UIView*) mantleView{
-    return objc_getAssociatedObject(self, UIViewMantlePointer);
+    return objc_getAssociatedObject(self, UIViewPopupMantlePointer);
 }
 -(void) setMantleView:(UIView*) mantleView{
-    objc_setAssociatedObject(self, UIViewMantlePointer, mantleView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, UIViewPopupMantlePointer, mantleView, OBJC_ASSOCIATION_ASSIGN);
 }
 -(UIView*) showView{
-    UIView *view = objc_getAssociatedObject(self, UIViewDisplayViewPointer);
+    UIView *view = objc_getAssociatedObject(self, UIViewPopupDisplayViewPointer);
     if (!view) {
         view = self;
     }
@@ -225,37 +261,38 @@ static const NSString *OffsetOrgin_Y = @"Y";
 }
 -(void) setShowView:(UIView*) view{
     if (view != self) {
-        objc_setAssociatedObject(self, UIViewDisplayViewPointer, view, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        objc_setAssociatedObject(self, UIViewPopupDisplayViewPointer, view, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
 }
 -(CGSize) offsetSize{
-    NSDictionary *dict = objc_getAssociatedObject(self, OffsetSizePointer);
+    NSDictionary *dict = objc_getAssociatedObject(self, UIViewPopupOffsetSizePointer);
     CGSize s = CGSizeMake(((NSNumber*)dict[OffsetSize_W]).floatValue, ((NSNumber*)dict[OffsetSize_H]).floatValue);
     return s;
 }
 -(void) setOffsetSize:(CGSize) size{
     NSDictionary *dict = @{OffsetSize_W:[NSNumber numberWithFloat:size.width],OffsetSize_H:[NSNumber numberWithFloat:size.height]};
-    objc_setAssociatedObject(self, OffsetSizePointer, dict, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, UIViewPopupOffsetSizePointer, dict, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 -(void) setBlockShowAnimation:(BlockPopupAnimation) block{
-    objc_setAssociatedObject(self, BlockShowAnimationPointer, block, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(self, UIViewPopupBlockShowAnimationPointer, block, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 -(BlockPopupAnimation) blockShowAnimation{
-    BlockPopupAnimation block = objc_getAssociatedObject(self, BlockShowAnimationPointer);
+    BlockPopupAnimation block = objc_getAssociatedObject(self, UIViewPopupBlockShowAnimationPointer);
     return block;
 }
 -(void) setBlockHiddenAnimation:(BlockPopupAnimation) block{
-    objc_setAssociatedObject(self, BlockHiddenAnimationPointer, block, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(self, UIViewPopupBlockHiddenAnimationPointer, block, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 -(BlockPopupAnimation) blockHiddenAnimation{
-    BlockPopupAnimation block = objc_getAssociatedObject(self, BlockHiddenAnimationPointer);
+    BlockPopupAnimation block = objc_getAssociatedObject(self, UIViewPopupBlockHiddenAnimationPointer);
     return block;
 }
 +(BlockPopupAnimation) __creteDefaultBlcokPopupShowAnmation{
     BlockPopupAnimation blockAnimation = ^(UIView *view, BlockPopupEndAnmation _blockEnd_){
         @synchronized(view) {
+            
             CATransform3D transformx = CATransform3DIdentity;
-            transformx = CATransform3DScale(transformx, 0, 0, 1);
+            transformx = CATransform3DScale(transformx, 2, 2, 1);
             [view showView].layer.transform = transformx;
             [view showView].alpha = 0;
             if ([[view mantleView] isKindOfClass:[PYMantleView class]]) {
@@ -275,13 +312,9 @@ static const NSString *OffsetOrgin_Y = @"Y";
             if ([[view mantleView] isKindOfClass:[PYMantleView class]]) {
                 [view mantleView].alpha = 1;
             }
-            
         } completion:^(BOOL finished) {
             @strongify(_blockEnd_);
             @strongify(view);
-            
-            view.isAnimationing = false;
-            
             if (!view) return;
             @synchronized(view) {
                 if(_blockEnd_)_blockEnd_(view);
@@ -293,6 +326,7 @@ static const NSString *OffsetOrgin_Y = @"Y";
 }
 +(BlockPopupEndAnmation) __creteDefaultBlcokPopupShowEndAnmation{
     BlockPopupEndAnmation blockEnd = ^(UIView * view){
+        view.isAnimationing = false;
         if ([view isShow]) {
             CATransform3D transformx = CATransform3DIdentity;
             transformx = CATransform3DScale(transformx, 1, 1, 1);
@@ -324,26 +358,39 @@ static const NSString *OffsetOrgin_Y = @"Y";
         view.isAnimationing = true;
         @unsafeify(view);
         @unsafeify(_blockEnd_);
-        [UIView animateWithDuration:PYPopupAnimationTime * PYPopupAnimationTimeOffset animations:^{
+        [UIView animateWithDuration:PYPopupAnimationTime * PYPopupAnimationTimeOffset * .2 animations:^{
             @strongify(view);
             CATransform3D transformx = CATransform3DIdentity;
-            transformx = CATransform3DScale(transformx, 0, 0, 1);
+            transformx = CATransform3DScale(transformx, 1.2, 1.2, 1);
             [view showView].layer.transform = transformx;
-            [view showView].alpha = 0;
-            if ([[view mantleView] isKindOfClass:[PYMantleView class]]) {
-                [view mantleView].alpha = 0;
-            }
             
         } completion:^(BOOL finished) {
             @strongify(_blockEnd_);
             @strongify(view);
             
-            view.isAnimationing = false;
-            
-            if (!view) return;
-            @synchronized(view) {
-                if(_blockEnd_)_blockEnd_(view);
-            }
+            @unsafeify(view);
+            @unsafeify(_blockEnd_);
+            [UIView animateWithDuration:PYPopupAnimationTime * PYPopupAnimationTimeOffset animations:^{
+                @strongify(view);
+                CATransform3D transformx = CATransform3DIdentity;
+                transformx = CATransform3DScale(transformx, .01, .01, 1);
+                [view showView].layer.transform = transformx;
+                [view showView].alpha = 0;
+                if ([[view mantleView] isKindOfClass:[PYMantleView class]]) {
+                    [view mantleView].alpha = 0;
+                }
+                
+            } completion:^(BOOL finished) {
+                @strongify(_blockEnd_);
+                @strongify(view);
+                
+                view.isAnimationing = false;
+                
+                if (!view) return;
+                @synchronized(view) {
+                    if(_blockEnd_)_blockEnd_(view);
+                }
+            }];
         }];
         
     };
@@ -352,6 +399,7 @@ static const NSString *OffsetOrgin_Y = @"Y";
 }
 +(BlockPopupEndAnmation) __creteDefaultBlcokPopupHiddenEndAnmation{
     BlockPopupEndAnmation blockEnd = ^(UIView * view){
+        view.isAnimationing = false;
         if (view.isShow == false) {
             UIView *showView = [view showView];
             UIView *mantleView = [view mantleView];

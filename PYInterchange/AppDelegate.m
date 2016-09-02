@@ -2,13 +2,13 @@
 //  AppDelegate.m
 //  PYInterchange
 //
-//  Created by wlpiaoyi on 16/1/18.
+//  Created by wlpiaoyi on 16/5/17.
 //  Copyright © 2016年 wlpiaoyi. All rights reserved.
 //
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <UISplitViewControllerDelegate>
 
 @end
 
@@ -16,7 +16,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     return YES;
 }
 
@@ -41,5 +40,6 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
 
 @end

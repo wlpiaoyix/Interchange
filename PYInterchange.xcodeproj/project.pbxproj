@@ -7,270 +7,370 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		15632B7D1C4CBCFE006D3B09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15632B7C1C4CBCFE006D3B09 /* main.m */; };
-		15632B801C4CBCFE006D3B09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15632B7F1C4CBCFE006D3B09 /* AppDelegate.m */; };
-		15632B831C4CBCFE006D3B09 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15632B821C4CBCFE006D3B09 /* ViewController.m */; };
-		15632B861C4CBCFE006D3B09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15632B841C4CBCFE006D3B09 /* Main.storyboard */; };
-		15632B881C4CBCFE006D3B09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15632B871C4CBCFE006D3B09 /* Assets.xcassets */; };
-		15632B8B1C4CBCFE006D3B09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15632B891C4CBCFE006D3B09 /* LaunchScreen.storyboard */; };
-		15632B9F1C4CBD47006D3B09 /* PYPopupTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 15632B961C4CBD47006D3B09 /* PYPopupTools.m */; };
-		15632BA01C4CBD47006D3B09 /* PYSheetTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 15632B981C4CBD47006D3B09 /* PYSheetTools.m */; };
-		15632BA11C4CBD47006D3B09 /* PYToastTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 15632B9A1C4CBD47006D3B09 /* PYToastTools.m */; };
-		15632BA21C4CBD47006D3B09 /* PYProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15632B9D1C4CBD47006D3B09 /* PYProgressView.m */; };
-		15632BA41C4CBD75006D3B09 /* Utile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15632BA31C4CBD75006D3B09 /* Utile.framework */; };
-		15632BA61C4CBDC7006D3B09 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15632BA51C4CBDC7006D3B09 /* AudioToolbox.framework */; };
-		15632BAF1C4CD951006D3B09 /* PYInterchange.framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 15632BAE1C4CD951006D3B09 /* PYInterchange.framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		15632BB41C4CD951006D3B09 /* PYInterchange.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 15632BAC1C4CD951006D3B09 /* PYInterchange.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		15632BBA1C4CD97B006D3B09 /* PYPopupTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 15632B961C4CBD47006D3B09 /* PYPopupTools.m */; };
-		15632BBB1C4CD97B006D3B09 /* PYToastTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 15632B9A1C4CBD47006D3B09 /* PYToastTools.m */; };
-		15632BBC1C4CD97B006D3B09 /* PYProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15632B9D1C4CBD47006D3B09 /* PYProgressView.m */; };
-		15632BBE1C4CD985006D3B09 /* PYPopupTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 15632B951C4CBD47006D3B09 /* PYPopupTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		15632BBF1C4CD985006D3B09 /* PYToastTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 15632B991C4CBD47006D3B09 /* PYToastTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		15632BC01C4CD985006D3B09 /* PYProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 15632B9C1C4CBD47006D3B09 /* PYProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		15632BC11C4CDA00006D3B09 /* Utile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15632BA31C4CBD75006D3B09 /* Utile.framework */; };
-		15632BC21C4CDA17006D3B09 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15632BA51C4CBDC7006D3B09 /* AudioToolbox.framework */; };
-		15D43EE51CC5CDA200E44A17 /* UIView+LayerSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D43EE41CC5CDA200E44A17 /* UIView+LayerSwitch.m */; };
-		15D43EE61CC5CF6800E44A17 /* UIView+LayerSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D43EE41CC5CDA200E44A17 /* UIView+LayerSwitch.m */; };
-		15D43EE71CC5CF7400E44A17 /* UIView+LayerSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = 15D43EE31CC5CDA200E44A17 /* UIView+LayerSwitch.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		15D82C7A1C7AA7F400F4AA61 /* PYDialogTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D82C791C7AA7F400F4AA61 /* PYDialogTools.m */; };
-		15D82C7B1C7AA8A700F4AA61 /* PYDialogTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D82C791C7AA7F400F4AA61 /* PYDialogTools.m */; };
-		15D82C7C1C7AA8B500F4AA61 /* PYDialogTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 15D82C781C7AA7F400F4AA61 /* PYDialogTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		15E164031C50997E00C6A842 /* UIView+Remove.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E164021C50997E00C6A842 /* UIView+Remove.m */; };
-		15E164091C509A2100C6A842 /* PYPopupParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E164081C509A2100C6A842 /* PYPopupParams.m */; };
-		15E1640C1C509BD500C6A842 /* UIView+Popup.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E1640B1C509BD500C6A842 /* UIView+Popup.m */; };
-		15E1640D1C50A64300C6A842 /* UIView+Remove.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E164021C50997E00C6A842 /* UIView+Remove.m */; };
-		15E1640E1C50A64300C6A842 /* UIView+Popup.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E1640B1C509BD500C6A842 /* UIView+Popup.m */; };
-		15E1640F1C50A6D100C6A842 /* PYPopupParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 15E164071C509A2100C6A842 /* PYPopupParams.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		15E164121C50B46300C6A842 /* UIView+Dialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E164111C50B46300C6A842 /* UIView+Dialog.m */; };
-		15E164131C50B69F00C6A842 /* UIView+Dialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E164111C50B46300C6A842 /* UIView+Dialog.m */; };
-		15E164141C50BE2700C6A842 /* UIView+Dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 15E164101C50B46300C6A842 /* UIView+Dialog.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		15E164151C50BE2700C6A842 /* UIView+Popup.h in Headers */ = {isa = PBXBuildFile; fileRef = 15E1640A1C509BD500C6A842 /* UIView+Popup.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		15E164161C50BE2700C6A842 /* UIView+Remove.h in Headers */ = {isa = PBXBuildFile; fileRef = 15E164011C50997E00C6A842 /* UIView+Remove.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15095EB11CEC395000948B95 /* UIView+Sheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 15095EB01CEC395000948B95 /* UIView+Sheet.m */; };
+		1558ECE51D5F4AAD002FFC8D /* PYProgressMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1582F0151D5D7574004995A5 /* PYProgressMessageView.m */; };
+		155F44B11CEB149700FD22EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F44B01CEB149700FD22EF /* main.m */; };
+		155F44B41CEB149700FD22EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F44B31CEB149700FD22EF /* AppDelegate.m */; };
+		155F44BD1CEB149800FD22EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 155F44BB1CEB149800FD22EF /* Main.storyboard */; };
+		155F44BF1CEB149800FD22EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 155F44BE1CEB149800FD22EF /* Assets.xcassets */; };
+		155F44C21CEB149800FD22EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 155F44C01CEB149800FD22EF /* LaunchScreen.storyboard */; };
+		155F44CD1CEB149800FD22EF /* PYInterchangeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F44CC1CEB149800FD22EF /* PYInterchangeTests.m */; };
+		155F44D81CEB149800FD22EF /* PYInterchangeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F44D71CEB149800FD22EF /* PYInterchangeUITests.m */; };
+		155F44E71CEB151C00FD22EF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F44E61CEB151C00FD22EF /* ViewController.m */; };
+		155F44E91CEB153C00FD22EF /* Utile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 155F44E81CEB153C00FD22EF /* Utile.framework */; };
+		155F45081CEB158900FD22EF /* UIView+Dialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F44F61CEB158900FD22EF /* UIView+Dialog.m */; };
+		155F45091CEB158900FD22EF /* UIView+LayerSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F44F81CEB158900FD22EF /* UIView+LayerSwitch.m */; };
+		155F450A1CEB158900FD22EF /* UIView+Popup.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F44FA1CEB158900FD22EF /* UIView+Popup.m */; };
+		155F450B1CEB158900FD22EF /* UIView+Remove.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F44FC1CEB158900FD22EF /* UIView+Remove.m */; };
+		155F450C1CEB158900FD22EF /* PYProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F44FF1CEB158900FD22EF /* PYProgressView.m */; };
+		155F450D1CEB158900FD22EF /* PYSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F45021CEB158900FD22EF /* PYSheetView.m */; };
+		1582F0161D5D7574004995A5 /* PYProgressMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1582F0151D5D7574004995A5 /* PYProgressMessageView.m */; };
+		15E407111D2F942500EF1E5A /* PYInterchange.framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 15E407101D2F942500EF1E5A /* PYInterchange.framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15E407181D2F942500EF1E5A /* PYInterchange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E4070E1D2F942500EF1E5A /* PYInterchange.framework */; };
+		15E4071F1D2F942500EF1E5A /* PYInterchange_frameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E4071E1D2F942500EF1E5A /* PYInterchange_frameworkTests.m */; };
+		15E4072C1D2F948C00EF1E5A /* PYPopupParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 155F44ED1CEB158900FD22EF /* PYPopupParams.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15E4072D1D2F948C00EF1E5A /* UIView+Dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 155F44F51CEB158900FD22EF /* UIView+Dialog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15E4072E1D2F948C00EF1E5A /* UIView+LayerSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = 155F44F71CEB158900FD22EF /* UIView+LayerSwitch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15E4072F1D2F948C00EF1E5A /* UIView+Popup.h in Headers */ = {isa = PBXBuildFile; fileRef = 155F44F91CEB158900FD22EF /* UIView+Popup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15E407301D2F948C00EF1E5A /* UIView+Remove.h in Headers */ = {isa = PBXBuildFile; fileRef = 155F44FB1CEB158900FD22EF /* UIView+Remove.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15E407311D2F948C00EF1E5A /* UIView+Sheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 15095EAF1CEC395000948B95 /* UIView+Sheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15E407321D2F948C00EF1E5A /* PYProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 155F44FE1CEB158900FD22EF /* PYProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15E407331D2F948C00EF1E5A /* PYSheetView.h in Headers */ = {isa = PBXBuildFile; fileRef = 155F45011CEB158900FD22EF /* PYSheetView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15E407341D2F94A300EF1E5A /* UIView+Dialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F44F61CEB158900FD22EF /* UIView+Dialog.m */; };
+		15E407351D2F94A300EF1E5A /* UIView+LayerSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F44F81CEB158900FD22EF /* UIView+LayerSwitch.m */; };
+		15E407361D2F94A300EF1E5A /* UIView+Popup.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F44FA1CEB158900FD22EF /* UIView+Popup.m */; };
+		15E407371D2F94A300EF1E5A /* UIView+Remove.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F44FC1CEB158900FD22EF /* UIView+Remove.m */; };
+		15E407381D2F94A300EF1E5A /* UIView+Sheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 15095EB01CEC395000948B95 /* UIView+Sheet.m */; };
+		15E407391D2F94A300EF1E5A /* PYProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F44FF1CEB158900FD22EF /* PYProgressView.m */; };
+		15E4073A1D2F94A300EF1E5A /* PYSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F45021CEB158900FD22EF /* PYSheetView.m */; };
+		15E4073B1D2F94D500EF1E5A /* Utile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 155F44E81CEB153C00FD22EF /* Utile.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		15632BB11C4CD951006D3B09 /* PBXContainerItemProxy */ = {
+		155F44C91CEB149800FD22EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 15632B701C4CBCFE006D3B09 /* Project object */;
+			containerPortal = 155F44A41CEB149700FD22EF /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 15632BAB1C4CD951006D3B09;
+			remoteGlobalIDString = 155F44AB1CEB149700FD22EF;
+			remoteInfo = PYInterchange;
+		};
+		155F44D41CEB149800FD22EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 155F44A41CEB149700FD22EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 155F44AB1CEB149700FD22EF;
+			remoteInfo = PYInterchange;
+		};
+		15E407191D2F942500EF1E5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 155F44A41CEB149700FD22EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15E4070D1D2F942500EF1E5A;
 			remoteInfo = PYInterchange.framework;
+		};
+		15E4071B1D2F942500EF1E5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 155F44A41CEB149700FD22EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 155F44AB1CEB149700FD22EF;
+			remoteInfo = PYInterchange;
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		15632BB81C4CD951006D3B09 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				15632BB41C4CD951006D3B09 /* PYInterchange.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		15632B781C4CBCFE006D3B09 /* PYInterchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PYInterchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		15632B7C1C4CBCFE006D3B09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		15632B7E1C4CBCFE006D3B09 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		15632B7F1C4CBCFE006D3B09 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		15632B811C4CBCFE006D3B09 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		15632B821C4CBCFE006D3B09 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		15632B851C4CBCFE006D3B09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		15632B871C4CBCFE006D3B09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		15632B8A1C4CBCFE006D3B09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		15632B8C1C4CBCFE006D3B09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		15632B951C4CBD47006D3B09 /* PYPopupTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYPopupTools.h; sourceTree = "<group>"; };
-		15632B961C4CBD47006D3B09 /* PYPopupTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYPopupTools.m; sourceTree = "<group>"; };
-		15632B971C4CBD47006D3B09 /* PYSheetTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYSheetTools.h; sourceTree = "<group>"; };
-		15632B981C4CBD47006D3B09 /* PYSheetTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYSheetTools.m; sourceTree = "<group>"; };
-		15632B991C4CBD47006D3B09 /* PYToastTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYToastTools.h; sourceTree = "<group>"; };
-		15632B9A1C4CBD47006D3B09 /* PYToastTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYToastTools.m; sourceTree = "<group>"; };
-		15632B9C1C4CBD47006D3B09 /* PYProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYProgressView.h; sourceTree = "<group>"; };
-		15632B9D1C4CBD47006D3B09 /* PYProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYProgressView.m; sourceTree = "<group>"; };
-		15632BA31C4CBD75006D3B09 /* Utile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Utile.framework; sourceTree = "<group>"; };
-		15632BA51C4CBDC7006D3B09 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		15632BAC1C4CD951006D3B09 /* PYInterchange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PYInterchange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		15632BAE1C4CD951006D3B09 /* PYInterchange.framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYInterchange.framework.h; sourceTree = "<group>"; };
-		15632BB01C4CD951006D3B09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		15D43EE31CC5CDA200E44A17 /* UIView+LayerSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LayerSwitch.h"; sourceTree = "<group>"; };
-		15D43EE41CC5CDA200E44A17 /* UIView+LayerSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayerSwitch.m"; sourceTree = "<group>"; };
-		15D82C781C7AA7F400F4AA61 /* PYDialogTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYDialogTools.h; sourceTree = "<group>"; };
-		15D82C791C7AA7F400F4AA61 /* PYDialogTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYDialogTools.m; sourceTree = "<group>"; };
-		15E164011C50997E00C6A842 /* UIView+Remove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Remove.h"; sourceTree = "<group>"; };
-		15E164021C50997E00C6A842 /* UIView+Remove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Remove.m"; sourceTree = "<group>"; };
-		15E164071C509A2100C6A842 /* PYPopupParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYPopupParams.h; sourceTree = "<group>"; };
-		15E164081C509A2100C6A842 /* PYPopupParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYPopupParams.m; sourceTree = "<group>"; };
-		15E1640A1C509BD500C6A842 /* UIView+Popup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Popup.h"; sourceTree = "<group>"; };
-		15E1640B1C509BD500C6A842 /* UIView+Popup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Popup.m"; sourceTree = "<group>"; };
-		15E164101C50B46300C6A842 /* UIView+Dialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Dialog.h"; sourceTree = "<group>"; };
-		15E164111C50B46300C6A842 /* UIView+Dialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Dialog.m"; sourceTree = "<group>"; };
+		15095EAF1CEC395000948B95 /* UIView+Sheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Sheet.h"; sourceTree = "<group>"; };
+		15095EB01CEC395000948B95 /* UIView+Sheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Sheet.m"; sourceTree = "<group>"; };
+		155F44AC1CEB149700FD22EF /* PYInterchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PYInterchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		155F44B01CEB149700FD22EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		155F44B21CEB149700FD22EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		155F44B31CEB149700FD22EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		155F44BC1CEB149800FD22EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		155F44BE1CEB149800FD22EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		155F44C11CEB149800FD22EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		155F44C31CEB149800FD22EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		155F44C81CEB149800FD22EF /* PYInterchangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PYInterchangeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		155F44CC1CEB149800FD22EF /* PYInterchangeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PYInterchangeTests.m; sourceTree = "<group>"; };
+		155F44CE1CEB149800FD22EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		155F44D31CEB149800FD22EF /* PYInterchangeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PYInterchangeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		155F44D71CEB149800FD22EF /* PYInterchangeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PYInterchangeUITests.m; sourceTree = "<group>"; };
+		155F44D91CEB149800FD22EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		155F44E51CEB151C00FD22EF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		155F44E61CEB151C00FD22EF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		155F44E81CEB153C00FD22EF /* Utile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Utile.framework; sourceTree = "<group>"; };
+		155F44ED1CEB158900FD22EF /* PYPopupParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYPopupParams.h; sourceTree = "<group>"; };
+		155F44F51CEB158900FD22EF /* UIView+Dialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Dialog.h"; sourceTree = "<group>"; };
+		155F44F61CEB158900FD22EF /* UIView+Dialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Dialog.m"; sourceTree = "<group>"; };
+		155F44F71CEB158900FD22EF /* UIView+LayerSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LayerSwitch.h"; sourceTree = "<group>"; };
+		155F44F81CEB158900FD22EF /* UIView+LayerSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayerSwitch.m"; sourceTree = "<group>"; };
+		155F44F91CEB158900FD22EF /* UIView+Popup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Popup.h"; sourceTree = "<group>"; };
+		155F44FA1CEB158900FD22EF /* UIView+Popup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Popup.m"; sourceTree = "<group>"; };
+		155F44FB1CEB158900FD22EF /* UIView+Remove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Remove.h"; sourceTree = "<group>"; };
+		155F44FC1CEB158900FD22EF /* UIView+Remove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Remove.m"; sourceTree = "<group>"; };
+		155F44FE1CEB158900FD22EF /* PYProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYProgressView.h; sourceTree = "<group>"; };
+		155F44FF1CEB158900FD22EF /* PYProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYProgressView.m; sourceTree = "<group>"; };
+		155F45011CEB158900FD22EF /* PYSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYSheetView.h; sourceTree = "<group>"; };
+		155F45021CEB158900FD22EF /* PYSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYSheetView.m; sourceTree = "<group>"; };
+		1582F0141D5D7574004995A5 /* PYProgressMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYProgressMessageView.h; sourceTree = "<group>"; };
+		1582F0151D5D7574004995A5 /* PYProgressMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYProgressMessageView.m; sourceTree = "<group>"; };
+		15E4070E1D2F942500EF1E5A /* PYInterchange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PYInterchange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		15E407101D2F942500EF1E5A /* PYInterchange.framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYInterchange.framework.h; sourceTree = "<group>"; };
+		15E407121D2F942500EF1E5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15E407171D2F942500EF1E5A /* PYInterchange.frameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PYInterchange.frameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15E4071E1D2F942500EF1E5A /* PYInterchange_frameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PYInterchange_frameworkTests.m; sourceTree = "<group>"; };
+		15E407201D2F942500EF1E5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		15632B751C4CBCFE006D3B09 /* Frameworks */ = {
+		155F44A91CEB149700FD22EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15632BA61C4CBDC7006D3B09 /* AudioToolbox.framework in Frameworks */,
-				15632BA41C4CBD75006D3B09 /* Utile.framework in Frameworks */,
+				155F44E91CEB153C00FD22EF /* Utile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		15632BA81C4CD951006D3B09 /* Frameworks */ = {
+		155F44C51CEB149800FD22EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15632BC21C4CDA17006D3B09 /* AudioToolbox.framework in Frameworks */,
-				15632BC11C4CDA00006D3B09 /* Utile.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		155F44D01CEB149800FD22EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15E4070A1D2F942500EF1E5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15E4073B1D2F94D500EF1E5A /* Utile.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15E407141D2F942500EF1E5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15E407181D2F942500EF1E5A /* PYInterchange.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		15632B6F1C4CBCFE006D3B09 = {
+		155F44A31CEB149700FD22EF = {
 			isa = PBXGroup;
 			children = (
-				15632BA51C4CBDC7006D3B09 /* AudioToolbox.framework */,
-				15632BA31C4CBD75006D3B09 /* Utile.framework */,
-				15632B7A1C4CBCFE006D3B09 /* PYInterchange */,
-				15632BAD1C4CD951006D3B09 /* PYInterchange.framework */,
-				15632B791C4CBCFE006D3B09 /* Products */,
+				155F44E81CEB153C00FD22EF /* Utile.framework */,
+				155F44AE1CEB149700FD22EF /* PYInterchange */,
+				155F44CB1CEB149800FD22EF /* PYInterchangeTests */,
+				155F44D61CEB149800FD22EF /* PYInterchangeUITests */,
+				15E4070F1D2F942500EF1E5A /* PYInterchange.framework */,
+				15E4071D1D2F942500EF1E5A /* PYInterchange.frameworkTests */,
+				155F44AD1CEB149700FD22EF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		15632B791C4CBCFE006D3B09 /* Products */ = {
+		155F44AD1CEB149700FD22EF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				15632B781C4CBCFE006D3B09 /* PYInterchange.app */,
-				15632BAC1C4CD951006D3B09 /* PYInterchange.framework */,
+				155F44AC1CEB149700FD22EF /* PYInterchange.app */,
+				155F44C81CEB149800FD22EF /* PYInterchangeTests.xctest */,
+				155F44D31CEB149800FD22EF /* PYInterchangeUITests.xctest */,
+				15E4070E1D2F942500EF1E5A /* PYInterchange.framework */,
+				15E407171D2F942500EF1E5A /* PYInterchange.frameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		15632B7A1C4CBCFE006D3B09 /* PYInterchange */ = {
+		155F44AE1CEB149700FD22EF /* PYInterchange */ = {
 			isa = PBXGroup;
 			children = (
-				15632B921C4CBD47006D3B09 /* Dialog */,
-				15632B9B1C4CBD47006D3B09 /* Progress */,
-				15632B7E1C4CBCFE006D3B09 /* AppDelegate.h */,
-				15632B7F1C4CBCFE006D3B09 /* AppDelegate.m */,
-				15632B811C4CBCFE006D3B09 /* ViewController.h */,
-				15632B821C4CBCFE006D3B09 /* ViewController.m */,
-				15632B841C4CBCFE006D3B09 /* Main.storyboard */,
-				15632B871C4CBCFE006D3B09 /* Assets.xcassets */,
-				15632B891C4CBCFE006D3B09 /* LaunchScreen.storyboard */,
-				15632B8C1C4CBCFE006D3B09 /* Info.plist */,
-				15632B7B1C4CBCFE006D3B09 /* Supporting Files */,
+				155F44EA1CEB158900FD22EF /* Dialog */,
+				155F44FD1CEB158900FD22EF /* Progress */,
+				155F45001CEB158900FD22EF /* Sheet */,
+				155F44E51CEB151C00FD22EF /* ViewController.h */,
+				155F44E61CEB151C00FD22EF /* ViewController.m */,
+				155F44B21CEB149700FD22EF /* AppDelegate.h */,
+				155F44B31CEB149700FD22EF /* AppDelegate.m */,
+				155F44BB1CEB149800FD22EF /* Main.storyboard */,
+				155F44BE1CEB149800FD22EF /* Assets.xcassets */,
+				155F44C01CEB149800FD22EF /* LaunchScreen.storyboard */,
+				155F44C31CEB149800FD22EF /* Info.plist */,
+				155F44AF1CEB149700FD22EF /* Supporting Files */,
 			);
 			path = PYInterchange;
 			sourceTree = "<group>";
 		};
-		15632B7B1C4CBCFE006D3B09 /* Supporting Files */ = {
+		155F44AF1CEB149700FD22EF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				15632B7C1C4CBCFE006D3B09 /* main.m */,
+				155F44B01CEB149700FD22EF /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		15632B921C4CBD47006D3B09 /* Dialog */ = {
+		155F44CB1CEB149800FD22EF /* PYInterchangeTests */ = {
 			isa = PBXGroup;
 			children = (
-				15632B951C4CBD47006D3B09 /* PYPopupTools.h */,
-				15632B961C4CBD47006D3B09 /* PYPopupTools.m */,
-				15D82C781C7AA7F400F4AA61 /* PYDialogTools.h */,
-				15D82C791C7AA7F400F4AA61 /* PYDialogTools.m */,
-				15E164071C509A2100C6A842 /* PYPopupParams.h */,
-				15E164081C509A2100C6A842 /* PYPopupParams.m */,
-				15632B971C4CBD47006D3B09 /* PYSheetTools.h */,
-				15632B981C4CBD47006D3B09 /* PYSheetTools.m */,
-				15632B991C4CBD47006D3B09 /* PYToastTools.h */,
-				15632B9A1C4CBD47006D3B09 /* PYToastTools.m */,
-				15E164101C50B46300C6A842 /* UIView+Dialog.h */,
-				15E164111C50B46300C6A842 /* UIView+Dialog.m */,
-				15E1640A1C509BD500C6A842 /* UIView+Popup.h */,
-				15E1640B1C509BD500C6A842 /* UIView+Popup.m */,
-				15E164011C50997E00C6A842 /* UIView+Remove.h */,
-				15E164021C50997E00C6A842 /* UIView+Remove.m */,
-				15D43EE31CC5CDA200E44A17 /* UIView+LayerSwitch.h */,
-				15D43EE41CC5CDA200E44A17 /* UIView+LayerSwitch.m */,
+				155F44CC1CEB149800FD22EF /* PYInterchangeTests.m */,
+				155F44CE1CEB149800FD22EF /* Info.plist */,
+			);
+			path = PYInterchangeTests;
+			sourceTree = "<group>";
+		};
+		155F44D61CEB149800FD22EF /* PYInterchangeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				155F44D71CEB149800FD22EF /* PYInterchangeUITests.m */,
+				155F44D91CEB149800FD22EF /* Info.plist */,
+			);
+			path = PYInterchangeUITests;
+			sourceTree = "<group>";
+		};
+		155F44EA1CEB158900FD22EF /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				155F44ED1CEB158900FD22EF /* PYPopupParams.h */,
+				155F44F51CEB158900FD22EF /* UIView+Dialog.h */,
+				155F44F61CEB158900FD22EF /* UIView+Dialog.m */,
+				155F44F71CEB158900FD22EF /* UIView+LayerSwitch.h */,
+				155F44F81CEB158900FD22EF /* UIView+LayerSwitch.m */,
+				155F44F91CEB158900FD22EF /* UIView+Popup.h */,
+				155F44FA1CEB158900FD22EF /* UIView+Popup.m */,
+				155F44FB1CEB158900FD22EF /* UIView+Remove.h */,
+				155F44FC1CEB158900FD22EF /* UIView+Remove.m */,
+				15095EAF1CEC395000948B95 /* UIView+Sheet.h */,
+				15095EB01CEC395000948B95 /* UIView+Sheet.m */,
 			);
 			path = Dialog;
 			sourceTree = "<group>";
 		};
-		15632B9B1C4CBD47006D3B09 /* Progress */ = {
+		155F44FD1CEB158900FD22EF /* Progress */ = {
 			isa = PBXGroup;
 			children = (
-				15632B9C1C4CBD47006D3B09 /* PYProgressView.h */,
-				15632B9D1C4CBD47006D3B09 /* PYProgressView.m */,
+				155F44FE1CEB158900FD22EF /* PYProgressView.h */,
+				155F44FF1CEB158900FD22EF /* PYProgressView.m */,
+				1582F0141D5D7574004995A5 /* PYProgressMessageView.h */,
+				1582F0151D5D7574004995A5 /* PYProgressMessageView.m */,
 			);
 			path = Progress;
 			sourceTree = "<group>";
 		};
-		15632BAD1C4CD951006D3B09 /* PYInterchange.framework */ = {
+		155F45001CEB158900FD22EF /* Sheet */ = {
 			isa = PBXGroup;
 			children = (
-				15632BAE1C4CD951006D3B09 /* PYInterchange.framework.h */,
-				15632BB01C4CD951006D3B09 /* Info.plist */,
+				155F45011CEB158900FD22EF /* PYSheetView.h */,
+				155F45021CEB158900FD22EF /* PYSheetView.m */,
+			);
+			path = Sheet;
+			sourceTree = "<group>";
+		};
+		15E4070F1D2F942500EF1E5A /* PYInterchange.framework */ = {
+			isa = PBXGroup;
+			children = (
+				15E407101D2F942500EF1E5A /* PYInterchange.framework.h */,
+				15E407121D2F942500EF1E5A /* Info.plist */,
 			);
 			path = PYInterchange.framework;
+			sourceTree = "<group>";
+		};
+		15E4071D1D2F942500EF1E5A /* PYInterchange.frameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				15E4071E1D2F942500EF1E5A /* PYInterchange_frameworkTests.m */,
+				15E407201D2F942500EF1E5A /* Info.plist */,
+			);
+			path = PYInterchange.frameworkTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		15632BA91C4CD951006D3B09 /* Headers */ = {
+		15E4070B1D2F942500EF1E5A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15632BAF1C4CD951006D3B09 /* PYInterchange.framework.h in Headers */,
-				15632BBE1C4CD985006D3B09 /* PYPopupTools.h in Headers */,
-				15632BBF1C4CD985006D3B09 /* PYToastTools.h in Headers */,
-				15632BC01C4CD985006D3B09 /* PYProgressView.h in Headers */,
-				15E1640F1C50A6D100C6A842 /* PYPopupParams.h in Headers */,
-				15E164141C50BE2700C6A842 /* UIView+Dialog.h in Headers */,
-				15E164151C50BE2700C6A842 /* UIView+Popup.h in Headers */,
-				15D82C7C1C7AA8B500F4AA61 /* PYDialogTools.h in Headers */,
-				15E164161C50BE2700C6A842 /* UIView+Remove.h in Headers */,
-				15D43EE71CC5CF7400E44A17 /* UIView+LayerSwitch.h in Headers */,
+				15E407111D2F942500EF1E5A /* PYInterchange.framework.h in Headers */,
+				15E4072C1D2F948C00EF1E5A /* PYPopupParams.h in Headers */,
+				15E4072D1D2F948C00EF1E5A /* UIView+Dialog.h in Headers */,
+				15E4072E1D2F948C00EF1E5A /* UIView+LayerSwitch.h in Headers */,
+				15E4072F1D2F948C00EF1E5A /* UIView+Popup.h in Headers */,
+				15E407301D2F948C00EF1E5A /* UIView+Remove.h in Headers */,
+				15E407311D2F948C00EF1E5A /* UIView+Sheet.h in Headers */,
+				15E407321D2F948C00EF1E5A /* PYProgressView.h in Headers */,
+				15E407331D2F948C00EF1E5A /* PYSheetView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		15632B771C4CBCFE006D3B09 /* PYInterchange */ = {
+		155F44AB1CEB149700FD22EF /* PYInterchange */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 15632B8F1C4CBCFE006D3B09 /* Build configuration list for PBXNativeTarget "PYInterchange" */;
+			buildConfigurationList = 155F44DC1CEB149800FD22EF /* Build configuration list for PBXNativeTarget "PYInterchange" */;
 			buildPhases = (
-				15632B741C4CBCFE006D3B09 /* Sources */,
-				15632B751C4CBCFE006D3B09 /* Frameworks */,
-				15632B761C4CBCFE006D3B09 /* Resources */,
-				15632BB81C4CD951006D3B09 /* Embed Frameworks */,
+				155F44A81CEB149700FD22EF /* Sources */,
+				155F44A91CEB149700FD22EF /* Frameworks */,
+				155F44AA1CEB149700FD22EF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				15632BB21C4CD951006D3B09 /* PBXTargetDependency */,
 			);
 			name = PYInterchange;
 			productName = PYInterchange;
-			productReference = 15632B781C4CBCFE006D3B09 /* PYInterchange.app */;
+			productReference = 155F44AC1CEB149700FD22EF /* PYInterchange.app */;
 			productType = "com.apple.product-type.application";
 		};
-		15632BAB1C4CD951006D3B09 /* PYInterchange.framework */ = {
+		155F44C71CEB149800FD22EF /* PYInterchangeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 15632BB71C4CD951006D3B09 /* Build configuration list for PBXNativeTarget "PYInterchange.framework" */;
+			buildConfigurationList = 155F44DF1CEB149800FD22EF /* Build configuration list for PBXNativeTarget "PYInterchangeTests" */;
 			buildPhases = (
-				15632BA71C4CD951006D3B09 /* Sources */,
-				15632BA81C4CD951006D3B09 /* Frameworks */,
-				15632BA91C4CD951006D3B09 /* Headers */,
-				15632BAA1C4CD951006D3B09 /* Resources */,
+				155F44C41CEB149800FD22EF /* Sources */,
+				155F44C51CEB149800FD22EF /* Frameworks */,
+				155F44C61CEB149800FD22EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				155F44CA1CEB149800FD22EF /* PBXTargetDependency */,
+			);
+			name = PYInterchangeTests;
+			productName = PYInterchangeTests;
+			productReference = 155F44C81CEB149800FD22EF /* PYInterchangeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		155F44D21CEB149800FD22EF /* PYInterchangeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 155F44E21CEB149800FD22EF /* Build configuration list for PBXNativeTarget "PYInterchangeUITests" */;
+			buildPhases = (
+				155F44CF1CEB149800FD22EF /* Sources */,
+				155F44D01CEB149800FD22EF /* Frameworks */,
+				155F44D11CEB149800FD22EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				155F44D51CEB149800FD22EF /* PBXTargetDependency */,
+			);
+			name = PYInterchangeUITests;
+			productName = PYInterchangeUITests;
+			productReference = 155F44D31CEB149800FD22EF /* PYInterchangeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		15E4070D1D2F942500EF1E5A /* PYInterchange.framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15E407291D2F942500EF1E5A /* Build configuration list for PBXNativeTarget "PYInterchange.framework" */;
+			buildPhases = (
+				15E407091D2F942500EF1E5A /* Sources */,
+				15E4070A1D2F942500EF1E5A /* Frameworks */,
+				15E4070B1D2F942500EF1E5A /* Headers */,
+				15E4070C1D2F942500EF1E5A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -278,27 +378,58 @@
 			);
 			name = PYInterchange.framework;
 			productName = PYInterchange.framework;
-			productReference = 15632BAC1C4CD951006D3B09 /* PYInterchange.framework */;
+			productReference = 15E4070E1D2F942500EF1E5A /* PYInterchange.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		15E407161D2F942500EF1E5A /* PYInterchange.frameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15E4072B1D2F942500EF1E5A /* Build configuration list for PBXNativeTarget "PYInterchange.frameworkTests" */;
+			buildPhases = (
+				15E407131D2F942500EF1E5A /* Sources */,
+				15E407141D2F942500EF1E5A /* Frameworks */,
+				15E407151D2F942500EF1E5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15E4071A1D2F942500EF1E5A /* PBXTargetDependency */,
+				15E4071C1D2F942500EF1E5A /* PBXTargetDependency */,
+			);
+			name = PYInterchange.frameworkTests;
+			productName = PYInterchange.frameworkTests;
+			productReference = 15E407171D2F942500EF1E5A /* PYInterchange.frameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		15632B701C4CBCFE006D3B09 /* Project object */ = {
+		155F44A41CEB149700FD22EF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = wlpiaoyi;
 				TargetAttributes = {
-					15632B771C4CBCFE006D3B09 = {
-						CreatedOnToolsVersion = 7.2;
+					155F44AB1CEB149700FD22EF = {
+						CreatedOnToolsVersion = 7.3.1;
 					};
-					15632BAB1C4CD951006D3B09 = {
-						CreatedOnToolsVersion = 7.2;
+					155F44C71CEB149800FD22EF = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 155F44AB1CEB149700FD22EF;
+					};
+					155F44D21CEB149800FD22EF = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 155F44AB1CEB149700FD22EF;
+					};
+					15E4070D1D2F942500EF1E5A = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					15E407161D2F942500EF1E5A = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 155F44AB1CEB149700FD22EF;
 					};
 				};
 			};
-			buildConfigurationList = 15632B731C4CBCFE006D3B09 /* Build configuration list for PBXProject "PYInterchange" */;
+			buildConfigurationList = 155F44A71CEB149700FD22EF /* Build configuration list for PBXProject "PYInterchange" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -306,29 +437,53 @@
 				en,
 				Base,
 			);
-			mainGroup = 15632B6F1C4CBCFE006D3B09;
-			productRefGroup = 15632B791C4CBCFE006D3B09 /* Products */;
+			mainGroup = 155F44A31CEB149700FD22EF;
+			productRefGroup = 155F44AD1CEB149700FD22EF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				15632B771C4CBCFE006D3B09 /* PYInterchange */,
-				15632BAB1C4CD951006D3B09 /* PYInterchange.framework */,
+				155F44AB1CEB149700FD22EF /* PYInterchange */,
+				155F44C71CEB149800FD22EF /* PYInterchangeTests */,
+				155F44D21CEB149800FD22EF /* PYInterchangeUITests */,
+				15E4070D1D2F942500EF1E5A /* PYInterchange.framework */,
+				15E407161D2F942500EF1E5A /* PYInterchange.frameworkTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		15632B761C4CBCFE006D3B09 /* Resources */ = {
+		155F44AA1CEB149700FD22EF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15632B8B1C4CBCFE006D3B09 /* LaunchScreen.storyboard in Resources */,
-				15632B881C4CBCFE006D3B09 /* Assets.xcassets in Resources */,
-				15632B861C4CBCFE006D3B09 /* Main.storyboard in Resources */,
+				155F44C21CEB149800FD22EF /* LaunchScreen.storyboard in Resources */,
+				155F44BF1CEB149800FD22EF /* Assets.xcassets in Resources */,
+				155F44BD1CEB149800FD22EF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		15632BAA1C4CD951006D3B09 /* Resources */ = {
+		155F44C61CEB149800FD22EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		155F44D11CEB149800FD22EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15E4070C1D2F942500EF1E5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15E407151D2F942500EF1E5A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -338,64 +493,101 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		15632B741C4CBCFE006D3B09 /* Sources */ = {
+		155F44A81CEB149700FD22EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15D82C7A1C7AA7F400F4AA61 /* PYDialogTools.m in Sources */,
-				15E164091C509A2100C6A842 /* PYPopupParams.m in Sources */,
-				15E164121C50B46300C6A842 /* UIView+Dialog.m in Sources */,
-				15632B9F1C4CBD47006D3B09 /* PYPopupTools.m in Sources */,
-				15632B831C4CBCFE006D3B09 /* ViewController.m in Sources */,
-				15D43EE51CC5CDA200E44A17 /* UIView+LayerSwitch.m in Sources */,
-				15632B801C4CBCFE006D3B09 /* AppDelegate.m in Sources */,
-				15632BA21C4CBD47006D3B09 /* PYProgressView.m in Sources */,
-				15632BA01C4CBD47006D3B09 /* PYSheetTools.m in Sources */,
-				15E164031C50997E00C6A842 /* UIView+Remove.m in Sources */,
-				15632BA11C4CBD47006D3B09 /* PYToastTools.m in Sources */,
-				15E1640C1C509BD500C6A842 /* UIView+Popup.m in Sources */,
-				15632B7D1C4CBCFE006D3B09 /* main.m in Sources */,
+				155F450B1CEB158900FD22EF /* UIView+Remove.m in Sources */,
+				15095EB11CEC395000948B95 /* UIView+Sheet.m in Sources */,
+				155F450C1CEB158900FD22EF /* PYProgressView.m in Sources */,
+				1582F0161D5D7574004995A5 /* PYProgressMessageView.m in Sources */,
+				155F44E71CEB151C00FD22EF /* ViewController.m in Sources */,
+				155F44B41CEB149700FD22EF /* AppDelegate.m in Sources */,
+				155F450D1CEB158900FD22EF /* PYSheetView.m in Sources */,
+				155F44B11CEB149700FD22EF /* main.m in Sources */,
+				155F45091CEB158900FD22EF /* UIView+LayerSwitch.m in Sources */,
+				155F450A1CEB158900FD22EF /* UIView+Popup.m in Sources */,
+				155F45081CEB158900FD22EF /* UIView+Dialog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		15632BA71C4CD951006D3B09 /* Sources */ = {
+		155F44C41CEB149800FD22EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15D43EE61CC5CF6800E44A17 /* UIView+LayerSwitch.m in Sources */,
-				15D82C7B1C7AA8A700F4AA61 /* PYDialogTools.m in Sources */,
-				15E164131C50B69F00C6A842 /* UIView+Dialog.m in Sources */,
-				15E1640D1C50A64300C6A842 /* UIView+Remove.m in Sources */,
-				15E1640E1C50A64300C6A842 /* UIView+Popup.m in Sources */,
-				15632BBA1C4CD97B006D3B09 /* PYPopupTools.m in Sources */,
-				15632BBB1C4CD97B006D3B09 /* PYToastTools.m in Sources */,
-				15632BBC1C4CD97B006D3B09 /* PYProgressView.m in Sources */,
+				155F44CD1CEB149800FD22EF /* PYInterchangeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		155F44CF1CEB149800FD22EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				155F44D81CEB149800FD22EF /* PYInterchangeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15E407091D2F942500EF1E5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1558ECE51D5F4AAD002FFC8D /* PYProgressMessageView.m in Sources */,
+				15E407341D2F94A300EF1E5A /* UIView+Dialog.m in Sources */,
+				15E407351D2F94A300EF1E5A /* UIView+LayerSwitch.m in Sources */,
+				15E407361D2F94A300EF1E5A /* UIView+Popup.m in Sources */,
+				15E407371D2F94A300EF1E5A /* UIView+Remove.m in Sources */,
+				15E407381D2F94A300EF1E5A /* UIView+Sheet.m in Sources */,
+				15E407391D2F94A300EF1E5A /* PYProgressView.m in Sources */,
+				15E4073A1D2F94A300EF1E5A /* PYSheetView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15E407131D2F942500EF1E5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15E4071F1D2F942500EF1E5A /* PYInterchange_frameworkTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		15632BB21C4CD951006D3B09 /* PBXTargetDependency */ = {
+		155F44CA1CEB149800FD22EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 15632BAB1C4CD951006D3B09 /* PYInterchange.framework */;
-			targetProxy = 15632BB11C4CD951006D3B09 /* PBXContainerItemProxy */;
+			target = 155F44AB1CEB149700FD22EF /* PYInterchange */;
+			targetProxy = 155F44C91CEB149800FD22EF /* PBXContainerItemProxy */;
+		};
+		155F44D51CEB149800FD22EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 155F44AB1CEB149700FD22EF /* PYInterchange */;
+			targetProxy = 155F44D41CEB149800FD22EF /* PBXContainerItemProxy */;
+		};
+		15E4071A1D2F942500EF1E5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15E4070D1D2F942500EF1E5A /* PYInterchange.framework */;
+			targetProxy = 15E407191D2F942500EF1E5A /* PBXContainerItemProxy */;
+		};
+		15E4071C1D2F942500EF1E5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 155F44AB1CEB149700FD22EF /* PYInterchange */;
+			targetProxy = 15E4071B1D2F942500EF1E5A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		15632B841C4CBCFE006D3B09 /* Main.storyboard */ = {
+		155F44BB1CEB149800FD22EF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				15632B851C4CBCFE006D3B09 /* Base */,
+				155F44BC1CEB149800FD22EF /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		15632B891C4CBCFE006D3B09 /* LaunchScreen.storyboard */ = {
+		155F44C01CEB149800FD22EF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				15632B8A1C4CBCFE006D3B09 /* Base */,
+				155F44C11CEB149800FD22EF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -403,10 +595,11 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		15632B8D1C4CBCFE006D3B09 /* Debug */ = {
+		155F44DA1CEB149800FD22EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -439,7 +632,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -447,10 +640,11 @@
 			};
 			name = Debug;
 		};
-		15632B8E1C4CBCFE006D3B09 /* Release */ = {
+		155F44DB1CEB149800FD22EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -477,7 +671,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -485,7 +679,7 @@
 			};
 			name = Release;
 		};
-		15632B901C4CBCFE006D3B09 /* Debug */ = {
+		155F44DD1CEB149800FD22EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -494,15 +688,15 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = PYInterchange/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = PYInterchange.PYInterchange;
+				PRODUCT_BUNDLE_IDENTIFIER = wlpiaoyi.PYInterchange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		15632B911C4CBCFE006D3B09 /* Release */ = {
+		155F44DE1CEB149800FD22EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -511,15 +705,61 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = PYInterchange/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = PYInterchange.PYInterchange;
+				PRODUCT_BUNDLE_IDENTIFIER = wlpiaoyi.PYInterchange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		15632BB51C4CD951006D3B09 /* Debug */ = {
+		155F44E01CEB149800FD22EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PYInterchangeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wlpiaoyi.PYInterchangeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PYInterchange.app/PYInterchange";
+			};
+			name = Debug;
+		};
+		155F44E11CEB149800FD22EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PYInterchangeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wlpiaoyi.PYInterchangeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PYInterchange.app/PYInterchange";
+			};
+			name = Release;
+		};
+		155F44E31CEB149800FD22EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PYInterchangeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wlpiaoyi.PYInterchangeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PYInterchange;
+			};
+			name = Debug;
+		};
+		155F44E41CEB149800FD22EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PYInterchangeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wlpiaoyi.PYInterchangeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PYInterchange;
+			};
+			name = Release;
+		};
+		15E407251D2F942500EF1E5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
@@ -533,10 +773,11 @@
 				);
 				INFOPLIST_FILE = PYInterchange.framework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = "PYInterchange.PYInterchange-framework";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "wlpiaoyi.PYInterchange-framework";
 				PRODUCT_NAME = PYInterchange;
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -544,7 +785,7 @@
 			};
 			name = Debug;
 		};
-		15632BB61C4CD951006D3B09 /* Release */ = {
+		15E407261D2F942500EF1E5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
@@ -558,48 +799,98 @@
 				);
 				INFOPLIST_FILE = PYInterchange.framework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = "PYInterchange.PYInterchange-framework";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "wlpiaoyi.PYInterchange-framework";
 				PRODUCT_NAME = PYInterchange;
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		15E407271D2F942500EF1E5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PYInterchange.frameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "wlpiaoyi.PYInterchange-frameworkTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PYInterchange.app/PYInterchange";
+			};
+			name = Debug;
+		};
+		15E407281D2F942500EF1E5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PYInterchange.frameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "wlpiaoyi.PYInterchange-frameworkTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PYInterchange.app/PYInterchange";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		15632B731C4CBCFE006D3B09 /* Build configuration list for PBXProject "PYInterchange" */ = {
+		155F44A71CEB149700FD22EF /* Build configuration list for PBXProject "PYInterchange" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				15632B8D1C4CBCFE006D3B09 /* Debug */,
-				15632B8E1C4CBCFE006D3B09 /* Release */,
+				155F44DA1CEB149800FD22EF /* Debug */,
+				155F44DB1CEB149800FD22EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		15632B8F1C4CBCFE006D3B09 /* Build configuration list for PBXNativeTarget "PYInterchange" */ = {
+		155F44DC1CEB149800FD22EF /* Build configuration list for PBXNativeTarget "PYInterchange" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				15632B901C4CBCFE006D3B09 /* Debug */,
-				15632B911C4CBCFE006D3B09 /* Release */,
+				155F44DD1CEB149800FD22EF /* Debug */,
+				155F44DE1CEB149800FD22EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		15632BB71C4CD951006D3B09 /* Build configuration list for PBXNativeTarget "PYInterchange.framework" */ = {
+		155F44DF1CEB149800FD22EF /* Build configuration list for PBXNativeTarget "PYInterchangeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				15632BB51C4CD951006D3B09 /* Debug */,
-				15632BB61C4CD951006D3B09 /* Release */,
+				155F44E01CEB149800FD22EF /* Debug */,
+				155F44E11CEB149800FD22EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		155F44E21CEB149800FD22EF /* Build configuration list for PBXNativeTarget "PYInterchangeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				155F44E31CEB149800FD22EF /* Debug */,
+				155F44E41CEB149800FD22EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15E407291D2F942500EF1E5A /* Build configuration list for PBXNativeTarget "PYInterchange.framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15E407251D2F942500EF1E5A /* Debug */,
+				15E407261D2F942500EF1E5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15E4072B1D2F942500EF1E5A /* Build configuration list for PBXNativeTarget "PYInterchange.frameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15E407271D2F942500EF1E5A /* Debug */,
+				15E407281D2F942500EF1E5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 15632B701C4CBCFE006D3B09 /* Project object */;
+	rootObject = 155F44A41CEB149700FD22EF /* Project object */;
 }

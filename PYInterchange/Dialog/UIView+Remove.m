@@ -10,6 +10,7 @@
 #import "PYPopupParams.h"
 #import <Utile/EXTScope.h>
 #import <objc/runtime.h>
+#import <Utile/NSObject+Hook.h>
 
 static const void *UIViewTouchesEnable = &UIViewTouchesEnable;
 
@@ -48,14 +49,7 @@ static const NSString *OffsetFrame_H = @"h";
         [self hook:selTouchMove];
         [self hook:selTouchEnd];
         [self hook:selTouchCancel];
-        
-        SEL deallocSEL = sel_getUid("dealloc");
-        SEL removeable_deallocSEL = @selector(removeable_dealloc);
-        if (deallocSEL && [self respondsToSelector:deallocSEL]) {
-            Method orgm = class_getInstanceMethod([UIView class], deallocSEL);
-            Method hookm = class_getInstanceMethod([UIView class], removeable_deallocSEL);
-            method_exchangeImplementations(hookm, orgm);
-        }
+        [NSObject hookWithMethodNames:nil];
     });
 }
 

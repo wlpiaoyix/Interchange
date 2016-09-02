@@ -37,10 +37,18 @@
  */
 -(void)setCornerRadiusAndBorder:(CGFloat)radius borderWidth:(CGFloat)width borderColor:(UIColor * _Nullable)color;
 /**
+ 设置阴影层
+ */
+-(void) setShadowColor:(nonnull CGColorRef) shadowColor shadowRadius :(CGFloat) shadowRadius;
+/**
+ 设置阴影层
+ */
+-(void) setShadowColor:(nonnull CGColorRef) shadowColor shadowRadius :(CGFloat) shadowRadius frame:(CGRect * _Nullable) frame;
+/**
  从xib加载数据，序列号要和当前class名称相同
  */
 +(instancetype _Nullable) loadXib;
 -(UIImage * _Nullable) drawView;
 -(UIImage * _Nullable) drawViewWithBounds:(CGRect) bounds;
-
+-(UIImage * _Nullable) drawViewWithBounds:(CGRect) bounds scale:(CGFloat) scale;
 @end

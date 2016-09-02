@@ -45,6 +45,12 @@ FOUNDATION_EXPORT const unsigned char Utile_FrameworkVersionString[];
 
 #import "PYFrostedEffectView.h"
 
+#import "NSObject+Hook.h"
+#import "UIViewController+Hook.h"
+#import "UIViewController+HookView.h"
+#import "UIViewController+HookOrientation.h"
+
 #import "EXTScope.h"
+
 
 

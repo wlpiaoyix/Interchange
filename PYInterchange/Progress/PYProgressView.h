@@ -8,17 +8,16 @@
 
 #import <UIKit/UIKit.h>
 extern CGFloat MAXPYProgressViewWidth;
+extern CGFloat MINPYProgressViewWidth;
 extern CGFloat MAXPYProgressViewHeight;
-extern CGFloat MINPYProgressViewWith;
-extern CGFloat MINPYProgressViewHeight;
-extern CGFloat MAXPYProgressMessageSpace;
+extern CGFloat PYProgressMessageSpace;
 
 @interface PYProgressView : UIView
-@property (nonatomic, strong, nullable) UIColor * color1;
-@property (nonatomic, strong, nullable) UIColor * color2;
-@property (nonatomic, strong, nonnull) NSAttributedString * textProgress;
-@property (nonatomic, strong, nullable) UIView * viewProgress;
 @property (nonatomic, copy, nullable) void (^blockCancel)(PYProgressView * _Nonnull target);
 -(void) progressShow;
 -(void) progressHidden;
+@end
+
+@interface PYProgressView(Message)
+@property (nonatomic, strong, nonnull) NSAttributedString * attributedString;
 @end

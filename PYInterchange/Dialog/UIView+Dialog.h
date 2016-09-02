@@ -8,13 +8,23 @@
 
 #import <UIKit/UIKit.h>
 #import "PYPopupParams.h"
+
+extern UIColor * _Nullable STATIC_TITLEVIEW_BACKGROUNDCLOLOR;
+extern UIColor * _Nullable STATIC_TITLEVIEW_BORDERCLOLOR;
+extern CGFloat  STATIC_TITLEVIEW_HEIGHT;
+extern CGFloat STATIC_TITLEVIEW_BORDERWIDTH;
+
+extern CGFloat STATIC_BUTTON_OFFSETWIDTH;
+extern CGFloat STATIC_BUTTON_HEIGHT;
 /**
  对话框
  */
 @interface UIView(Dialog)
 
+@property (nonatomic, retain, nullable) id dialogUserInfo;
 @property (nonatomic, retain, nullable) NSString * dialogTitle;
 @property (nonatomic, retain, nullable) NSAttributedString * dialogAttributeTitle;
+@property (nonatomic, retain, nullable) UIView * dialogTitleView;
 
 @property (nonatomic, retain, nullable) NSString * dialogMessage;
 @property (nonatomic, retain, nullable) NSAttributedString * dialogAttributeMessage;

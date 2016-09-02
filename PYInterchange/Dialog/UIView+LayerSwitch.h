@@ -17,9 +17,9 @@
  在最下层
  */
 @property (nonatomic) BOOL layerSwitchToBack;
-
 /**
- 检查图层
+ 参与layer调整的view集合
  */
-+(void) layerSwitchCheck;
+@property (nonatomic, strong, readonly) NSMutableArray<NSNumber *> * hashTableUIViewLayerSwitch;
+
 @end

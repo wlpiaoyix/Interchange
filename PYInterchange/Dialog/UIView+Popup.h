@@ -28,10 +28,12 @@ extern CGFloat PYPopupAnimationTime;
 @property (nonatomic,copy, nullable) BlockPopupAnimation blockHiddenAnimation;
 //<=====================显示和隐藏时候的回调=========================
 
+//基础层
+@property (nonatomic, assign, nonnull) UIView * baseView;
 //遮罩层
-@property (nonatomic, retain, nonnull) UIView * mantleView;
+@property (nonatomic, assign, nonnull) UIView * mantleView;
 //显示的视图默认是自己
-@property (nonatomic, retain, nonnull) UIView * showView;
+@property (nonatomic, strong, nonnull) UIView * showView;
 
 -(void) popupShow;
 -(void) popupHidden;
